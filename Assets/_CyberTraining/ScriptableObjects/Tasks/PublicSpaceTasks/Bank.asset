@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: Bank
+  m_EditorClassIdentifier: 
+  TaskName: Notification from bank
+  TaskPrompt: 
+  TaskDescription: Check for data safety
+  TaskAsnwer1: Look around to see if no one is looking, but not covering the input
+    tries
+  TaskAsnwer2: Before loging into the bank system, make sure noone is looking
+  TaskAsnwer3: Noone cares what im doing, I'm safe
+  EmailLetter: {fileID: 0}
+  Answer1: 1
+  Answer2: 2
+  Answer3: 0
+  taskCompleted: 0

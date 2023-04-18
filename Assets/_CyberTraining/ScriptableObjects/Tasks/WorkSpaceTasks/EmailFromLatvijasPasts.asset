@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: EmailFromLatvijasPasts
+  m_EditorClassIdentifier: 
+  TaskName: 'Email about a package '
+  TaskPrompt: 
+  TaskDescription: Email about a package from LatvijasPasts
+  TaskAsnwer1: check email content
+  TaskAsnwer2: open link attachements to see the package delivery status
+  TaskAsnwer3: Check if there is an actual package, look it up on a different link,
+    other than provided in the letter
+  EmailLetter: {fileID: 0}
+  Answer1: 1
+  Answer2: 0
+  Answer3: 2
+  taskCompleted: 0

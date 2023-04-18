@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: PackageDelivery
+  m_EditorClassIdentifier: 
+  TaskName: Package delivery
+  TaskPrompt: Go to the door
+  TaskDescription: Open door
+  TaskAsnwer1: Make sure about contact info, get package, allow for setup
+  TaskAsnwer2: Ignore
+  TaskAsnwer3: Setup yourself
+  Answer1: 2
+  Answer2: 0
+  Answer3: 1
+  taskCompleted: 0

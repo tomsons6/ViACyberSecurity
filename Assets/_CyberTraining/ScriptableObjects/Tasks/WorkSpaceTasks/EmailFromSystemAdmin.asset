@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: EmailFromSystemAdmin
+  m_EditorClassIdentifier: 
+  TaskName: Email from system administrator
+  TaskPrompt: 
+  TaskDescription: Recieved an email from system administrator about system restart
+  TaskAsnwer1: ignore email
+  TaskAsnwer2: 'check if legitimate, if so proceed with the tasks '
+  TaskAsnwer3: read email, but ignore the actions requested
+  EmailLetter: {fileID: 0}
+  Answer1: 0
+  Answer2: 2
+  Answer3: 1
+  taskCompleted: 0

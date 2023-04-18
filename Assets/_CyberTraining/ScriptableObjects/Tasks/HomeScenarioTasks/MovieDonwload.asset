@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: MovieDonwload
+  m_EditorClassIdentifier: 
+  TaskName: Newest movie availible
+  TaskPrompt: Go to computer
+  TaskDescription: Newest movie is available in this torrent
+  TaskAsnwer1: I want to watch before buying
+  TaskAsnwer2: torrents are safe because I have linux
+  TaskAsnwer3: Pireted products usually have viruses and steal from the creators
+  EmailLetter: {fileID: 11400000, guid: ee9066c5d3629db4f8b0b6c09202e948, type: 2}
+  Answer1: 1
+  Answer2: 0
+  Answer3: 2
+  taskCompleted: 0

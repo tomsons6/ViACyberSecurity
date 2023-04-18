@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: EmailFromBoard
+  m_EditorClassIdentifier: 
+  TaskName: Email from board
+  TaskPrompt: 
+  TaskDescription: Email from the board of company about a meeting
+  TaskAsnwer1: check email content
+  TaskAsnwer2: check about the meeting in a different comunication way
+  TaskAsnwer3: email is coming from the board, all should be good.
+  EmailLetter: {fileID: 0}
+  Answer1: 1
+  Answer2: 2
+  Answer3: 0
+  taskCompleted: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: OfficeEndLicenseMail
+  m_EditorClassIdentifier: 
+  TaskName: MS Office licence ending
+  TaskPrompt: Check email
+  TaskDescription: Recevied email about office licence ending and a link to renewal
+  TaskAsnwer1: Ignore and download a crack
+  TaskAsnwer2: Check the licence status in MS office
+  TaskAsnwer3: Continue using office and ignore licence warnings
+  EmailLetter: {fileID: 11400000, guid: 5119b99c8f3e49b449b582118a877e09, type: 2}
+  Answer1: 0
+  Answer2: 2
+  Answer3: 1
+  taskCompleted: 0

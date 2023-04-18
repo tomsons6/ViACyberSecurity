@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d8e43a6f1be9f429c5256c5ca0aced, type: 3}
+  m_Name: EmailFromBusinessPartner
+  m_EditorClassIdentifier: 
+  TaskName: Email from business partner
+  TaskPrompt: 
+  TaskDescription: Recieved an email with an attachement from a business partner
+  TaskAsnwer1: open without checking
+  TaskAsnwer2: 
+  TaskAsnwer3: If email is expected and with the correct topics, then proceed to
+    open
+  EmailLetter: {fileID: 0}
+  Answer1: 0
+  Answer2: 0
+  Answer3: 2
+  taskCompleted: 0

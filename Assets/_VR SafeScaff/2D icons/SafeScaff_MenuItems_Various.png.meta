@@ -1,0 +1,485 @@
+fileFormatVersion: 2
+guid: f514a9f672aec614bb10b7d065b9b7c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7828813368725853302
+    second: SafeScaff_MenuItems_Various_0
+  - first:
+      213: -3037156868272817174
+    second: SafeScaff_MenuItems_Various_1
+  - first:
+      213: 7199313293573457616
+    second: SafeScaff_MenuItems_Various_2
+  - first:
+      213: 2267754729370999237
+    second: SafeScaff_MenuItems_Various_3
+  - first:
+      213: -8706074257546470076
+    second: SafeScaff_MenuItems_Various_4
+  - first:
+      213: 7506777275948895763
+    second: SafeScaff_MenuItems_Various_5
+  - first:
+      213: 7394460851793574810
+    second: SafeScaff_MenuItems_Various_6
+  - first:
+      213: -3225619463974673772
+    second: SafeScaff_MenuItems_Various_7
+  - first:
+      213: -3440590978176030588
+    second: SafeScaff_MenuItems_Various_8
+  - first:
+      213: 5181892141028734803
+    second: SafeScaff_MenuItems_Various_10
+  - first:
+      213: 2396396034633494842
+    second: SafeScaff_MenuItems_Various_11
+  - first:
+      213: -348478297933416754
+    second: SafeScaff_MenuItems_Various_9
+  - first:
+      213: 7616947271056830507
+    second: SafeScaff_MenuItems_Various_12
+  - first:
+      213: -6385380658143654726
+    second: SafeScaff_MenuItems_Various_14
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 768
+        width: 278
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674dbbfa74885ac60800000000000000
+      internalID: 7828813368725853302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_1
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 864
+        width: 233
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebf57b7be9d9d5d0800000000000000
+      internalID: -3037156868272817174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_2
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 780
+        width: 188
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 32, z: 32, w: 32}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d681320c4919e360800000000000000
+      internalID: 7199313293573457616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_3
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 805
+        width: 171
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9ded949eea87f10800000000000000
+      internalID: 2267754729370999237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 513
+        width: 273
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d15cae69fcd2780800000000000000
+      internalID: -8706074257546470076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_5
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 704
+        width: 229
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e88ece82e6d2860800000000000000
+      internalID: 7506777275948895763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_6
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 559
+        width: 188
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 32, z: 32, w: 32}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b30b897f66e9660800000000000000
+      internalID: 7394460851793574810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_7
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 544
+        width: 229
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4922435003c4c33d0800000000000000
+      internalID: -3225619463974673772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 258
+        width: 273
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48867600cb09040d0800000000000000
+      internalID: -3440590978176030588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_10
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 339
+        width: 188
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 32, z: 32, w: 32}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357f76a8277c9e740800000000000000
+      internalID: 5181892141028734803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_11
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 6
+        width: 268
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31fb713f75b14120800000000000000
+      internalID: 2396396034633494842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_9
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 387
+        width: 225
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6feb795d4f92bf0800000000000000
+      internalID: -348478297933416754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 64
+        width: 245
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20393ccf25d4b960800000000000000
+      internalID: 7616947271056830507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeScaff_MenuItems_Various_14
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 118
+        width: 188
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 32, z: 32, w: 32}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc82b36f129267a0800000000000000
+      internalID: -6385380658143654726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e5477bb0ceb8fa64e88232c4829f28f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SafeScaff_MenuItems_Various_9: -348478297933416754
+      SafeScaff_MenuItems_Various_4: -8706074257546470076
+      SafeScaff_MenuItems_Various_8: -3440590978176030588
+      SafeScaff_MenuItems_Various_3: 2267754729370999237
+      SafeScaff_MenuItems_Various_10: 5181892141028734803
+      SafeScaff_MenuItems_Various_2: 7199313293573457616
+      SafeScaff_MenuItems_Various_0: 7828813368725853302
+      SafeScaff_MenuItems_Various_5: 7506777275948895763
+      SafeScaff_MenuItems_Various_6: 7394460851793574810
+      SafeScaff_MenuItems_Various_7: -3225619463974673772
+      SafeScaff_MenuItems_Various_1: -3037156868272817174
+      SafeScaff_MenuItems_Various_11: 2396396034633494842
+      SafeScaff_MenuItems_Various_12: 7616947271056830507
+      SafeScaff_MenuItems_Various_14: -6385380658143654726
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
