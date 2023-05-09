@@ -18221,6 +18221,11 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2177786242912287523, guid: 2e39c698a32109447980926b96127a4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2177786242912287534, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
       propertyPath: LetterParent
