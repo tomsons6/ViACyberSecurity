@@ -209,6 +209,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4252995935641774281, guid: 2e39c698a32109447980926b96127a4c,
+        type: 3}
+      propertyPath: m_TagString
+      value: XrRig
+      objectReference: {fileID: 0}
     - target: {fileID: 4252995935641774283, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
       propertyPath: m_RootOrder

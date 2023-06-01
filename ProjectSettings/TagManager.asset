@@ -9,6 +9,8 @@ TagManager:
   - TaskController
   - grabber
   - Programms
+  - XrRig
+  - FPSController
   layers:
   - Default
   - TransparentFX
