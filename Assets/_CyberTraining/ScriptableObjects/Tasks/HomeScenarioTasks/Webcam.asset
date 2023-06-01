@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Webcam
   m_EditorClassIdentifier: 
   TaskName: Webcam light is on
-  TaskPrompt: 
+  TaskPrompt: Touch webcam
   TaskDescription: what should you do?
   TaskAsnwer1: Turn off webcam
   TaskAsnwer2: Close cover

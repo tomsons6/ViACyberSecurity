@@ -1,13 +1,32 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "1WMHHA68GN2201",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "1WMHHA68GN2201",
+        "name": "com.VidzemesUniversity.CyberSecurityTraining",
+        "processId": 8092,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.oculus.shellenv",
+            "processId": 4097,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 7072,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 8092,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +60,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },

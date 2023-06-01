@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: EmailAbout router
   m_EditorClassIdentifier: 
   TaskName: Email about new router
-  TaskPrompt: 
+  TaskPrompt: Go to computer
   TaskDescription: Look at email
   TaskAsnwer1: Not sure if you have ordered something
   TaskAsnwer2: Open without reading
   TaskAsnwer3: Probably a real letter, should double check
-  EmailLetter: {fileID: 0}
+  EmailLetter: {fileID: 11400000, guid: bbc8c71c025354b428211a68ff6cc67e, type: 2}
   Answer1: 1
   Answer2: 0
   Answer3: 2

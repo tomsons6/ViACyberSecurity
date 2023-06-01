@@ -18,7 +18,7 @@ MonoBehaviour:
   TaskAsnwer1: Open everything and see the content
   TaskAsnwer2: Probably spam, should ignore
   TaskAsnwer3: Open email, but do not open the attachement
-  EmailLetter: {fileID: 0}
+  EmailLetter: {fileID: 11400000, guid: 035b26848b3e4e94fa2adbf527c53ab5, type: 2}
   Answer1: 0
   Answer2: 2
   Answer3: 1

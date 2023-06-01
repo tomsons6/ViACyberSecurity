@@ -32,6 +32,10 @@ public class TaskController : MonoBehaviour
     GameObject EmailLetterPrefab;
     [SerializeField]
     GameObject LetterParent;
+    //WebCamTask
+    [SerializeField]
+    GameObject WebCamLight;
+    //UI Panels
     [SerializeField]
     GameObject ResultPanel;
     [SerializeField]
@@ -122,7 +126,11 @@ public class TaskController : MonoBehaviour
 
         }
     }
-
+    public void WebCamTask()
+    {
+        Material Light = WebCamLight.GetComponent<Renderer>().material;
+        Light.EnableKeyword("_EMISSION");
+    }
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(0);

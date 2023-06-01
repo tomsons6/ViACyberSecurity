@@ -90,6 +90,10 @@ public class TaskManager : MonoBehaviour
                     {
                         controller.EmailTask();
                     }
+                    if (task.TaskPrompt.Contains("webcam"))
+                    {
+                        controller.WebCamTask();
+                    }
                 }
                 return;
             }
