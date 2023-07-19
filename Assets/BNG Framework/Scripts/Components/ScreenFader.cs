@@ -86,8 +86,9 @@ namespace BNG {
             if (FadeOnSceneLoaded && fadeObject != null) {
                 // Start screen at fade
                 updateImageAlpha(FadeColor.a);
-
+#if UNITY_ANDROID
                 StartCoroutine(fadeOutWithDelay(SceneFadeInDelay));
+#endif
             }
         }
 

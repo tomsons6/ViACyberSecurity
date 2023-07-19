@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MovieDonwload
   m_EditorClassIdentifier: 
   TaskName: Newest movie availible
-  TaskPrompt: Go to computer
+  TaskPrompt: Check email
   TaskDescription: Newest movie is available in this torrent
   TaskAsnwer1: I want to watch before buying
   TaskAsnwer2: torrents are safe because I have linux

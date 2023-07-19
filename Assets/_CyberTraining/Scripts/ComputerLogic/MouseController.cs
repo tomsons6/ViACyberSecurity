@@ -33,7 +33,13 @@ public class MouseController : MonoBehaviour
         MouseGrab = GetComponent<Grabbable>();
         MouseStartPosition = this.transform.position;
     }
-
+#if UNITY_STANDALONE || UNITY_WEBGL
+    private void OnEnable()
+    {
+        Cursor.enabled = false;
+        this.gameObject.SetActive(false);
+    }
+#endif
     // Update is called once per frame
     void Update()
     {

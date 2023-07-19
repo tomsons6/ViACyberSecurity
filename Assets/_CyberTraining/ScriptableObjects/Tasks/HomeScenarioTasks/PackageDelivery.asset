@@ -18,6 +18,7 @@ MonoBehaviour:
   TaskAsnwer1: Make sure about contact info, get package, allow for setup
   TaskAsnwer2: Ignore
   TaskAsnwer3: Setup yourself
+  EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 0
   Answer3: 1

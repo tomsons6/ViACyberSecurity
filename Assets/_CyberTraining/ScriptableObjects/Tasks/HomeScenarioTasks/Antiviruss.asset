@@ -18,6 +18,7 @@ MonoBehaviour:
   TaskAsnwer1: Update
   TaskAsnwer2: Update and scan
   TaskAsnwer3: Ignore
+  EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 2
   Answer3: 0

@@ -40,7 +40,9 @@ public class Letter : MonoBehaviour
 
     IEnumerator OpenLetter()
     {
+#if UNITY_ANDROID
         TaskManager.Instance.controller.CloseTaskPromt();
+#endif
         if (PlusOneIcon != null) { PlusOneIcon.SetActive(false); }
         TP_Header.text = letter.Sender + "   " + letter.Title;
         TP_LetterMainBody.text = letter.Body;

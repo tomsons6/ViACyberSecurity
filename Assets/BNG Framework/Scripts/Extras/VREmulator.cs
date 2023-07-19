@@ -380,11 +380,17 @@ namespace BNG {
         }
 
         public virtual void ResetHands() {
-            leftControllerTranform.transform.localPosition = Vector3.zero;
-            leftControllerTranform.transform.localEulerAngles = Vector3.zero;
+            if(leftControllerTranform != null)
+            {
+                leftControllerTranform.transform.localPosition = Vector3.zero;
+                leftControllerTranform.transform.localEulerAngles = Vector3.zero;
 
-            rightControllerTranform.transform.localPosition = Vector3.zero;
-            rightControllerTranform.transform.localEulerAngles = Vector3.zero;
+            }
+            if(rightControllerTranform != null)
+            {
+                rightControllerTranform.transform.localPosition = Vector3.zero;
+                rightControllerTranform.transform.localEulerAngles = Vector3.zero;
+            }
         }
 
         public virtual void ResetAll() {
@@ -392,8 +398,10 @@ namespace BNG {
             ResetHands();
 
             // Reset Camera
-            mainCameraTransform.localEulerAngles = Vector3.zero;
-
+            if(mainCameraTransform != null)
+            {
+                mainCameraTransform.localEulerAngles = Vector3.zero;
+            }
             // Reset Player
             if (player) {
                 player.ElevateCameraHeight = _originalPlayerYOffset;

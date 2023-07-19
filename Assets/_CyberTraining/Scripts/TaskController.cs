@@ -12,6 +12,10 @@ public class TaskController : MonoBehaviour
     [SerializeField]
     TMP_Text TaskName;
     [SerializeField]
+    TMP_Text TaskNumber;
+    [SerializeField]
+    GameObject centreEyeAnchor;
+    [SerializeField]
     TMP_Text TaskDescription;
     [SerializeField]
     TMP_Text TaskPromtText;
@@ -45,19 +49,58 @@ public class TaskController : MonoBehaviour
 
     public void StartTask()
     {
+        TaskManager.Instance.TaskStarted = true;
+#if PLATFORM_STANDALONE_WIN || UNITY_WEBGL
+
+        if (CurrentTask.EmailLetter != null || CurrentTask.name.ToLower() == "safenetworking")
+        {
+            GetComponentInParent<FPSManager>().DisablePCScreen();
+            //GetComponentInParent<FPSManager>().EnableOnlyMouse(true);
+            GetComponentInParent<FPSManager>().EnableTaskCanva();
+            Debug.Log("Email task ");
+        }
+        else
+        {
+            Debug.Log("Regular task");
+            GetComponentInParent<FPSManager>().EnableTaskCanva();
+        }
+
+
+#endif
         if (TaskPromptCanva.activeInHierarchy)
         {
             TaskPromptCanva.SetActive(false);
         }
         TaskMainCanva.SetActive(true);
+#if PLATFORM_ANDROID
+        MoveTaskCanva();
+#endif
         TaskName.text = CurrentTask.TaskName;
         TaskDescription.text = CurrentTask.TaskDescription;
+        TaskManager.Instance.currentTaskCount++;
+        TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " from " + TaskManager.Instance.TotalTaskCount().ToString();
         Answer1.GetComponentInChildren<TMP_Text>().text = "Answer 1: " + CurrentTask.TaskAsnwer1;
         Answer2.GetComponentInChildren<TMP_Text>().text = "Answer 2: " + CurrentTask.TaskAsnwer2;
         Answer3.GetComponentInChildren<TMP_Text>().text = "Answer 3: " + CurrentTask.TaskAsnwer3;
     }
+    public IEnumerator TaskPromtWrapper()
+    {
+#if UNITY_STANDALONE || UNITY_WEBGL
+        GetComponentInParent<FPSManager>().EnableControls(true);
+#endif
+        TaskPromt();
+        yield return new WaitForSeconds(3f);
+        if (!TaskManager.Instance.TaskStarted)
+        {
+            CloseTaskPromt();
+        }
+        yield return null;
+    }
     public void TaskPromt()
     {
+#if PLATFORM_ANDROID
+        MoveTaskCanva();
+#endif
         TaskMainCanva.SetActive(false);
         TaskPromptCanva.SetActive(true);
         TaskPromtText.text = CurrentTask.TaskPrompt;
@@ -66,6 +109,9 @@ public class TaskController : MonoBehaviour
     public void CloseTaskPromt()
     {
         TaskPromptCanva.SetActive(false);
+#if UNITY_STANDALONE_WIN || UNITY_WEBGL
+        //GetComponentInParent<FPSManager>().DisableTaskCanva();
+#endif
     }
     public void Answer1Presed()
     {
@@ -133,6 +179,15 @@ public class TaskController : MonoBehaviour
     }
     public void BackToMainMenu()
     {
+        TaskManager.Instance.ClearSavedGame();
         SceneManager.LoadScene(0);
     }
+#if UNITY_ANDROID
+    public void MoveTaskCanva()
+    {
+        this.transform.position = centreEyeAnchor.transform.position + centreEyeAnchor.transform.forward * 1f;
+        this.transform.LookAt(centreEyeAnchor.transform);
+        this.transform.Rotate(0, 180f, 0);
+    }
+#endif
 }

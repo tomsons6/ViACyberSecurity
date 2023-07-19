@@ -4,18 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TaskManager : MonoBehaviour
 {
     [SerializeField]
-    Scenario scenario;
+    Scenario CurrentScenario;
     [SerializeField]
     public TaskController controller;
     [SerializeField]
     public List<PressedAnswer> AllAnswers = new List<PressedAnswer>();
     GameObject Programms;
+    [SerializeField]
+    Scenario HomeScenario;
 
+    public delegate void StartTask();
+    public StartTask TaskDelegate;
     public static TaskManager Instance { get; private set; }
+
+    public bool TaskPromtActive;
+    public bool TaskStarted;
+
+    public int currentTaskCount;
 
     private void Awake()
     {
@@ -39,53 +49,71 @@ public class TaskManager : MonoBehaviour
     }
     void OnSceneChangeWrapper(Scene current, Scene Next)
     {
-        if(Next.buildIndex == 0)
+        if (Next.buildIndex == 0)
         {
-            scenario = null;
+            CurrentScenario = null;
+            GameObject.Find("HomeScenario").GetComponent<Button>().onClick.AddListener(delegate { ButtonPress(HomeScenario); });
         }
         else
         {
+            //GameObject.Find("HomeScenario").GetComponent<Button>().onClick.RemoveAllListeners();
             OnSceneChange();
         }
     }
     public void OnSceneChange()
     {
-        controller = GameObject.FindGameObjectWithTag("TaskController").GetComponent<TaskController>();
+#if UNITY_STANDALONE || UNITY_WEBGL
+        controller = GameObject.FindGameObjectWithTag("FPSController").GetComponentInChildren<TaskController>();
+#endif
+#if UNITY_ANDROID
+        controller = GameObject.FindGameObjectWithTag("XrRig").GetComponentInChildren<TaskController>();
+
+#endif
+
         Programms = GameObject.FindGameObjectWithTag("Programms");
         ChangeTask();
     }
-
+    void ButtonPress(Scenario scenario)
+    {
+        CurrentScenario = scenario;
+    }
     public void SelectScenario(Scenario selectScenario)
     {
-        scenario = selectScenario;
+        CurrentScenario = selectScenario;
     }
     public void ChangeTask()
     {
-        if(Programms != null)
+        TaskStarted = false;
+        if (Programms != null)
         {
-            foreach(Transform child in Programms.transform)
+            foreach (Transform child in Programms.transform)
             {
                 child.gameObject.SetActive(false);
             }
         }
-        if (scenario.tasks.All(x => x.taskCompleted))
+        if (CurrentScenario.tasks.All(x => x.taskCompleted))
         {
             controller.ShowResults();
         }
-        foreach (Task task in scenario.tasks)
+        foreach (Task task in CurrentScenario.tasks)
         {
             if (!task.taskCompleted)
             {
                 controller.CurrentTask = task;
+#if UNITY_STANDALONE || UNITY_WEBGL
                 if (task.TaskPrompt == "")
                 {
+                    TaskPromtActive = false;
+                    TaskDelegate?.Invoke();
                     Debug.Log("Start task");
                     controller.StartTask();
                 }
                 else
                 {
                     Debug.Log("Task Promt");
-                    controller.TaskPromt();
+                    TaskPromtActive = true;
+                    TaskDelegate?.Invoke();
+                    StartCoroutine(controller.TaskPromtWrapper());
                     if (controller.CurrentTask.EmailLetter != null)
                     {
                         controller.EmailTask();
@@ -95,16 +123,50 @@ public class TaskManager : MonoBehaviour
                         controller.WebCamTask();
                     }
                 }
+#endif
+#if UNITY_ANDROID
+                if (task.TaskPrompt == "")
+                {
+                    Debug.Log("Start task");
+                    controller.StartTask();
+                }
+                else
+                {
+                    Debug.Log("Task Promt");
+                    //controller.TaskPromt();
+                    StartCoroutine(controller.TaskPromtWrapper());
+                    if (controller.CurrentTask.EmailLetter != null)
+                    {
+                        controller.EmailTask();
+                    }
+                    if (task.TaskPrompt.Contains("webcam"))
+                    {
+                        controller.WebCamTask();
+                    }
+                }
+#endif
                 return;
             }
         }
     }
     public void ClearSavedGame()
     {
-        foreach (Task task in scenario.tasks)
+        foreach (Task task in CurrentScenario.tasks)
         {
             task.taskCompleted = false;
+            AllAnswers.Clear();
         }
+        currentTaskCount = 0;
+#if UNITY_STANDALONE_WIN || UNITY_WEBGL
+        if (controller != null)
+        {
+            controller.gameObject.GetComponentInParent<FPSManager>().Taskcanva = null;
+        }
+#endif
+    }
+    public int TotalTaskCount()
+    {
+        return HomeScenario.tasks.Count;
     }
 }
 [Serializable]

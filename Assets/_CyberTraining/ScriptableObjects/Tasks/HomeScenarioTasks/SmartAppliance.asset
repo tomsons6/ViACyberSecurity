@@ -18,6 +18,7 @@ MonoBehaviour:
   TaskAsnwer1: Change default settings and password
   TaskAsnwer2: Change settings, leave password
   TaskAsnwer3: 'Plug in and forget about it '
+  EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 1
   Answer3: 0

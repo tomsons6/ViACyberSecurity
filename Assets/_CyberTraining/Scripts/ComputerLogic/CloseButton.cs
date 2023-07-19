@@ -13,8 +13,6 @@ public class CloseButton : MonoBehaviour
         if (ClosingPanel.gameObject.activeSelf)
         {
             ClosingPanel.gameObject.SetActive(false);
-            Debug.Log("closing panel");
         }
-
     }
 }

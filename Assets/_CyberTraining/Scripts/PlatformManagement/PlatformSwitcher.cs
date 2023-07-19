@@ -1,3 +1,4 @@
+using BNG;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlatformSwitcher : MonoBehaviour
     GameObject XrRig;
     [SerializeField]
     GameObject FPSController;
+    [SerializeField]
+    GameObject EventSystem;
 
     public static PlatformSwitcher Instance { get; private set; }
     // Start is called before the first frame update
@@ -23,21 +26,17 @@ public class PlatformSwitcher : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this);
         }
-        SceneManager.sceneLoaded += FindControllersWrapper;
+        SceneManager.sceneLoaded += SceneReloadWrapper;
     }
-    void Start()
+    void SceneReloadWrapper(Scene scene, LoadSceneMode mode)
     {
         FindControllers();
-#if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE || UNITY_WEBGL
         StandaloneMode();
 #endif
 #if UNITY_ANDROID
         VRMode();
 #endif
-    }
-    void FindControllersWrapper(Scene scene, LoadSceneMode mode)
-    {
-        FindControllers();
     }
     void FindControllers()
     {
@@ -46,18 +45,47 @@ public class PlatformSwitcher : MonoBehaviour
     }
     void VRMode()
     {
-        if (XrRig != null)
+        XrRig.SetActive(true);
+        if (FPSController != null)
         {
-            XrRig.SetActive(true);
             FPSController.SetActive(false);
         }
     }
     void StandaloneMode()
     {
-        if (FPSController != null)
+        Debug.Log("Standalone");
+
+        FPSController.SetActive(true);
+        if (XrRig != null)
         {
-            FPSController.SetActive(true);
             XrRig.SetActive(false);
         }
+
+        EventSystem = GameObject.Find("EventSystem");
+        if (EventSystem != null)
+        {
+            StartCoroutine(DisableVRSystem(EventSystem));
+        }
+    }
+
+    IEnumerator DisableVRSystem(GameObject ES)
+    {
+        while (ES.GetComponent<VRUISystem>() == null)
+        {
+            yield return null;
+        }
+        if(ES.GetComponent<VRUISystem>() != null)
+        {
+            ES.GetComponent<VRUISystem>().enabled = false;
+            yield return null;
+        }
+    }
+    void ClearCacheObjects()
+    {
+        EventSystem = null;
+    }
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= SceneReloadWrapper;
     }
 }

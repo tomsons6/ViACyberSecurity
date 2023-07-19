@@ -19,7 +19,9 @@ public class WebBrowser : MonoBehaviour
 
     IEnumerator ActivatePopUp()
     {
+#if UNITY_ANDROID
         TaskManager.Instance.controller.CloseTaskPromt();
+#endif
         yield return new WaitForSeconds(3f);
         WebPopUp.SetActive(true);
         GetComponent<TaskActivator>().TaskActivation();

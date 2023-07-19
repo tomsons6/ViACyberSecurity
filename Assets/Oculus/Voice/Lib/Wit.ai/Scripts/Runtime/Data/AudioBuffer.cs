@@ -71,12 +71,13 @@ namespace Meta.WitAi.Data
                     }
                 }
             }
+            #if UNITY_ANDROID
             // Use default mic script
             if (_micInput == null)
             {
                 _micInput = gameObject.AddComponent<Mic>();
             }
-
+#endif
             InitializeMicDataBuffer();
         }
 

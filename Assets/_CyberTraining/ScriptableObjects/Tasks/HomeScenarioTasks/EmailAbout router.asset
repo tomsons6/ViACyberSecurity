@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EmailAbout router
   m_EditorClassIdentifier: 
   TaskName: Email about new router
-  TaskPrompt: Go to computer
+  TaskPrompt: Check email
   TaskDescription: Look at email
   TaskAsnwer1: Not sure if you have ordered something
   TaskAsnwer2: Open without reading
