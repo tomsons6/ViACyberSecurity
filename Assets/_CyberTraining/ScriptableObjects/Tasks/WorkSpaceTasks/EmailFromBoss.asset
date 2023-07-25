@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: EmailFromBoss
   m_EditorClassIdentifier: 
   TaskName: Email from boss
-  TaskPrompt: 
+  TaskPrompt: Check email
   TaskDescription: Boss asks to check the banks balance
   TaskAsnwer1: Confirm in a different comunication way if that was a legitamet request
   TaskAsnwer2: 
   TaskAsnwer3: Ask for a confirmation in an email response
-  EmailLetter: {fileID: 0}
+  EmailLetter: {fileID: 11400000, guid: e50a09957b3d18540a107052558904de, type: 2}
   Answer1: 2
   Answer2: 0
   Answer3: 0

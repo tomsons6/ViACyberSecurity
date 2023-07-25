@@ -8,8 +8,7 @@ using UnityEngine.UI;
 
 public class TaskManager : MonoBehaviour
 {
-    [SerializeField]
-    Scenario CurrentScenario;
+    public Scenario CurrentScenario;
     [SerializeField]
     public TaskController controller;
     [SerializeField]
@@ -17,6 +16,10 @@ public class TaskManager : MonoBehaviour
     GameObject Programms;
     [SerializeField]
     Scenario HomeScenario;
+    [SerializeField]
+    Scenario publicScenario;
+    [SerializeField]
+    Scenario workScenario;
 
     public delegate void StartTask();
     public StartTask TaskDelegate;
@@ -53,6 +56,8 @@ public class TaskManager : MonoBehaviour
         {
             CurrentScenario = null;
             GameObject.Find("HomeScenario").GetComponent<Button>().onClick.AddListener(delegate { ButtonPress(HomeScenario); });
+            GameObject.Find("PublicScenario").GetComponent<Button>().onClick.AddListener(delegate { ButtonPress(publicScenario); });
+            GameObject.Find("WorkScenario").GetComponent<Button>().onClick.AddListener(delegate { ButtonPress(workScenario); });
         }
         else
         {
@@ -67,7 +72,6 @@ public class TaskManager : MonoBehaviour
 #endif
 #if UNITY_ANDROID
         controller = GameObject.FindGameObjectWithTag("XrRig").GetComponentInChildren<TaskController>();
-
 #endif
 
         Programms = GameObject.FindGameObjectWithTag("Programms");
@@ -164,9 +168,9 @@ public class TaskManager : MonoBehaviour
         }
 #endif
     }
-    public int TotalTaskCount()
+    public int TotalTaskCount(Scenario currentScenario)
     {
-        return HomeScenario.tasks.Count;
+        return currentScenario.tasks.Count;
     }
 }
 [Serializable]

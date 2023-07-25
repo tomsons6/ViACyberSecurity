@@ -71,6 +71,10 @@ public class FPSManager : MonoBehaviour
             }
 
         }
+        else
+        {
+            PressEText.gameObject.SetActive(false);
+        }
 
     }
     void DetectTaskActivator(Transform RayCastObj)

@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5393c48ccae1a479cd41ace6582e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenario: {fileID: 0}
+  CurrentScenario: {fileID: 0}
   controller: {fileID: 0}
   AllAnswers: []
+  HomeScenario: {fileID: 11400000, guid: c062f7443c041ab44a77e5c56a8a8f40, type: 2}
+  publicScenario: {fileID: 11400000, guid: 8ceddbfe42777a24cab25d0f59d9ff92, type: 2}
+  workScenario: {fileID: 11400000, guid: 9c321d47db3d12a41b60d78457998534, type: 2}
+  TaskPromtActive: 0
+  TaskStarted: 0
+  currentTaskCount: 0

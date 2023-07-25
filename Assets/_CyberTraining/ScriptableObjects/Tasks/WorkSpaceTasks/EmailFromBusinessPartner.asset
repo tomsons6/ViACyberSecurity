@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: EmailFromBusinessPartner
   m_EditorClassIdentifier: 
   TaskName: Email from business partner
-  TaskPrompt: 
+  TaskPrompt: Check email
   TaskDescription: Recieved an email with an attachement from a business partner
   TaskAsnwer1: open without checking
   TaskAsnwer2: 
   TaskAsnwer3: If email is expected and with the correct topics, then proceed to
     open
-  EmailLetter: {fileID: 0}
+  EmailLetter: {fileID: 11400000, guid: 7ad4f871ab3f5a744a90406f6d167341, type: 2}
   Answer1: 0
   Answer2: 0
   Answer3: 2

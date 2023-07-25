@@ -65283,6 +65283,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3807941826448750918, guid: ffcd1d20b3211924c964982775fab028,
         type: 3}
+      propertyPath: centreEyeAnchor
+      value: 
+      objectReference: {fileID: 1743276266120252700}
+    - target: {fileID: 3807941826448750918, guid: ffcd1d20b3211924c964982775fab028,
+        type: 3}
       propertyPath: PlusOneEmailLogo
       value: 
       objectReference: {fileID: 0}

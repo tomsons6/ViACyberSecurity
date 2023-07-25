@@ -78,7 +78,7 @@ public class TaskController : MonoBehaviour
         TaskName.text = CurrentTask.TaskName;
         TaskDescription.text = CurrentTask.TaskDescription;
         TaskManager.Instance.currentTaskCount++;
-        TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " from " + TaskManager.Instance.TotalTaskCount().ToString();
+        TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " from " + TaskManager.Instance.TotalTaskCount(TaskManager.Instance.CurrentScenario).ToString();
         Answer1.GetComponentInChildren<TMP_Text>().text = "Answer 1: " + CurrentTask.TaskAsnwer1;
         Answer2.GetComponentInChildren<TMP_Text>().text = "Answer 2: " + CurrentTask.TaskAsnwer2;
         Answer3.GetComponentInChildren<TMP_Text>().text = "Answer 3: " + CurrentTask.TaskAsnwer3;
@@ -180,6 +180,7 @@ public class TaskController : MonoBehaviour
     public void BackToMainMenu()
     {
         TaskManager.Instance.ClearSavedGame();
+        TaskManager.Instance.CurrentScenario = null;
         SceneManager.LoadScene(0);
     }
 #if UNITY_ANDROID

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: EmailFromLatvijasPasts
   m_EditorClassIdentifier: 
   TaskName: 'Email about a package '
-  TaskPrompt: 
+  TaskPrompt: Check email
   TaskDescription: Email about a package from LatvijasPasts
   TaskAsnwer1: check email content
   TaskAsnwer2: open link attachements to see the package delivery status
   TaskAsnwer3: Check if there is an actual package, look it up on a different link,
     other than provided in the letter
-  EmailLetter: {fileID: 0}
+  EmailLetter: {fileID: 11400000, guid: c699b1863fa4e974aaae6f8bee646ff2, type: 2}
   Answer1: 1
   Answer2: 0
   Answer3: 2
