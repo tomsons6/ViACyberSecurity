@@ -355,6 +355,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSControllerGameScene
       objectReference: {fileID: 0}
+    - target: {fileID: 7758014747469871963, guid: 584c85214761e6d4baedb26408eb0991,
+        type: 3}
+      propertyPath: LetterParent
+      value: 
+      objectReference: {fileID: 2095084680}
+    - target: {fileID: 7758014747469871963, guid: 584c85214761e6d4baedb26408eb0991,
+        type: 3}
+      propertyPath: PlusOneEmailLogo
+      value: 
+      objectReference: {fileID: 2095084681}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 584c85214761e6d4baedb26408eb0991, type: 3}
 --- !u!4 &1028639490 stripped
@@ -778,6 +788,18 @@ PrefabInstance:
 --- !u!224 &2095084679 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5958785239593932009, guid: fee1b68514cdb454290fab2f4251a8f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2095084678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2095084680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5958785240458884631, guid: fee1b68514cdb454290fab2f4251a8f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2095084678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2095084681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5958785240633224668, guid: fee1b68514cdb454290fab2f4251a8f5,
     type: 3}
   m_PrefabInstance: {fileID: 2095084678}
   m_PrefabAsset: {fileID: 0}

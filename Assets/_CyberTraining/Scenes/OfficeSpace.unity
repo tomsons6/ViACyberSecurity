@@ -509,6 +509,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7758014747469871963, guid: 584c85214761e6d4baedb26408eb0991,
+        type: 3}
+      propertyPath: LetterParent
+      value: 
+      objectReference: {fileID: 1697634820}
+    - target: {fileID: 7758014747469871963, guid: 584c85214761e6d4baedb26408eb0991,
+        type: 3}
+      propertyPath: centreEyeAnchor
+      value: 
+      objectReference: {fileID: 1007096869}
+    - target: {fileID: 7758014747469871963, guid: 584c85214761e6d4baedb26408eb0991,
+        type: 3}
+      propertyPath: PlusOneEmailLogo
+      value: 
+      objectReference: {fileID: 1697634821}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 584c85214761e6d4baedb26408eb0991, type: 3}
 --- !u!1001 &1007096867
@@ -593,6 +608,12 @@ PrefabInstance:
 --- !u!4 &1007096868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1743276266080519030, guid: 1187b1564903c2943995d28a19105e75,
+    type: 3}
+  m_PrefabInstance: {fileID: 1007096867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1007096869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1743276266120252700, guid: 1187b1564903c2943995d28a19105e75,
     type: 3}
   m_PrefabInstance: {fileID: 1007096867}
   m_PrefabAsset: {fileID: 0}
@@ -1118,6 +1139,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1697634818}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1697634822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697634820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &1710134323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4269163523262396377, guid: 879e5226a6452c043813a4e9eb0aff74,

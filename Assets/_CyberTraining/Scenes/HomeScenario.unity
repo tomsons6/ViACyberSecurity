@@ -4095,6 +4095,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 808951036577589112, guid: 49f576a03ece56a4e9c640ed081f6a68,
         type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951036577589112, guid: 49f576a03ece56a4e9c640ed081f6a68,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

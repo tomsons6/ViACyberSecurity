@@ -89,7 +89,7 @@ public class TaskController : MonoBehaviour
         GetComponentInParent<FPSManager>().EnableControls(true);
 #endif
         TaskPromt();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         if (!TaskManager.Instance.TaskStarted)
         {
             CloseTaskPromt();
