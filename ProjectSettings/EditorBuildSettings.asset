@@ -22,6 +22,8 @@ EditorBuildSettings:
       type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 2ec24d39f7b5ac84aad7e5df7b4fd3ea,
       type: 2}
+    Unity.XR.PXR.Settings: {fileID: 11400000, guid: e0b8ab57e2eeb8948af1fa86ad13b175,
+      type: 2}
     WebXR.Settings: {fileID: 11400000, guid: fe9659bb224bb054bb1dbca065d1d318, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 7c0d65f8139523c47a3ac0b1587ccdf6,
       type: 2}

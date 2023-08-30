@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: Cleaner
   m_EditorClassIdentifier: 
   TaskName: Cleaner
+  TaskNameLV: "Apkop\u0113ja"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Cleaner comes to clean the floor and asks to stand up
+  TaskDescriptionLV: "Apkop\u0113ja pien\u0101k izt\u012Br\u012Bt zem galda"
   TaskAsnwer1: lock the screen, stand up, back off slightly
+  TaskAnswer1LV: "Aizsl\u0113dz ekr\u0101nu, piecelies, un paeej nedaudz mal\u0101"
   TaskAsnwer2: lock the screen, stand up, do not move away from the device
+  TaskAnswer2LV: "Aizsl\u0113dz ekr\u0101nu, piecelies, bet nenoej no datora"
   TaskAsnwer3: Go for a smoke while the cleaner is cleaning
+  TaskAnswer3LV: "Izej \u0101r\u0101 paelpot svaigu gaisu, kam\u0113r t\u012Bra vietu."
   EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 2

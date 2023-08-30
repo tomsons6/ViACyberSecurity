@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: OfficeEndLicenseMail
   m_EditorClassIdentifier: 
   TaskName: MS Office licence ending
+  TaskNameLV: MS Office beidzas licence
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Recevied email about office licence ending and a link to renewal
+  TaskDescriptionLV: "Sa\u0146emts epasts par offisa licences beig\u0161anos un saiti
+    uz atjauno\u0161anu"
   TaskAsnwer1: Ignore and download a crack
+  TaskAnswer1LV: "Ignor\u0113t un lejupl\u0101d\u0113t pir\u0101tisko versiju"
   TaskAsnwer2: Check the licence status in MS office
+  TaskAnswer2LV: "P\u0101rbaud\u012Bt licences statusu MS Office"
   TaskAsnwer3: Continue using office and ignore licence warnings
+  TaskAnswer3LV: "Turpin\u0101t izmantot Offisu un ignor\u0113t licences br\u012Bdin\u0101jumus"
   EmailLetter: {fileID: 11400000, guid: 5119b99c8f3e49b449b582118a877e09, type: 2}
   Answer1: 0
   Answer2: 2

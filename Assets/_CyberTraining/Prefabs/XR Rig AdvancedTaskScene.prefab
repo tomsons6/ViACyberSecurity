@@ -11736,7 +11736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49877b2c8de1d6e4ebc9ca5d8ea02d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: 0
+  InputSource: 3
   actionSet: {fileID: -944628639613478452, guid: e39f4b35a6db18348b41eb0262520e69,
     type: 3}
   TrackingOrigin: 2
@@ -16808,10 +16808,10 @@ MonoBehaviour:
   MinimumCapsuleHeight: 0.4
   MaximumCapsuleHeight: 3
   LastTeleportTime: 0
-  CharacterControllerYOffset: 0.5
+  CharacterControllerYOffset: 0
   CameraHeight: 0
   ElevateCameraIfNoHMDPresent: 0
-  ElevateCameraHeight: 1.65
+  ElevateCameraHeight: 1.6
   MinElevation: -100
   MaxElevation: 5000
   LastPlayerMoveTime: 0

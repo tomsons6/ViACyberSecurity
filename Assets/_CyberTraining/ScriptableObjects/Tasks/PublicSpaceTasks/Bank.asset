@@ -13,12 +13,18 @@ MonoBehaviour:
   m_Name: Bank
   m_EditorClassIdentifier: 
   TaskName: Notification from bank
+  TaskNameLV: "Pazi\u0146ojums bankas lietotn\u0113"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Check for data safety
+  TaskDescriptionLV: "P\u0101rbaudi datu dro\u0161\u012Bbu"
   TaskAsnwer1: Look around to see if no one is looking, but not covering the input
     tries
+  TaskAnswer1LV: "Paskaties vai neviens neskat\u0101s uz tevi, bet nepiesedz tastat\u016Bru"
   TaskAsnwer2: Before loging into the bank system, make sure noone is looking
+  TaskAnswer2LV: "Pirms ielogojies, p\u0101rliecinies ka neviens neskat\u0101s"
   TaskAsnwer3: Noone cares what im doing, I'm safe
+  TaskAnswer3LV: "Nevienam t\u0101pat neinteres\u0113, esmu dro\u0161\u012Bb\u0101"
   EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 2

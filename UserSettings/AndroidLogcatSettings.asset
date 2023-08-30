@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "1WMHHA68GN2201",
+    "m_SelectedDeviceId": "PA8150MGGB251661G",
     "m_SelectedPackage": {
-        "deviceId": "1WMHHA68GN2201",
+        "deviceId": "PA8150MGGB251661G",
         "name": "com.VidzemesUniversity.CyberSecurityTraining",
-        "processId": 8092,
+        "processId": 17614,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,84 @@
             "deviceId": "1WMHHA68GN2201",
             "name": "com.VidzemesUniversity.CyberSecurityTraining",
             "processId": 8092,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 14417,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 6244,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 7083,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 7844,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 8478,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 11407,
+            "exited": false
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 19616,
+            "exited": true
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 5277,
+            "exited": true
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 13393,
+            "exited": false
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 15183,
+            "exited": false
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 15197,
+            "exited": false
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 16273,
+            "exited": false
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 17614,
             "exited": false
         }
     ],

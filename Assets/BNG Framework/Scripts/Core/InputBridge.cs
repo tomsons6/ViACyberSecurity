@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.XR.PXR;
 using UnityEngine;
 #if UNITY_2018_4_OR_NEWER
 using UnityEngine.XR;
@@ -9,7 +10,6 @@ using UnityEngine.XR;
 #if STEAM_VR_SDK
 using Valve.VR;
 #endif
-
 namespace BNG {
 
     #region Enums
@@ -973,68 +973,142 @@ namespace BNG {
         #region Pico Input
 
         public virtual void UpdatePicoInput() {
-#if PICO_SDK
+
             int rightHand = 1;
             int leftHand = 0;
             var prevBool = LeftThumbstick;
             var prevVal = LeftGrip;
 
-            LeftThumbstickAxis = ApplyDeadZones(Pvr_UnitySDKAPI.Controller.UPvr_GetAxis2D(leftHand), ThumbstickDeadzoneX, ThumbstickDeadzoneY);
-            RightThumbstickAxis = ApplyDeadZones(Pvr_UnitySDKAPI.Controller.UPvr_GetAxis2D(rightHand), ThumbstickDeadzoneX, ThumbstickDeadzoneY);
+              InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.primary2DAxis, out LeftThumbstickAxis);
+            ApplyDeadZones(LeftThumbstickAxis, ThumbstickDeadzoneX, ThumbstickDeadzoneY);
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.primary2DAxis, out RightThumbstickAxis);
+            ApplyDeadZones(RightThumbstickAxis, ThumbstickDeadzoneX, ThumbstickDeadzoneY);
 
             prevBool = LeftThumbstick;
-            LeftThumbstick = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.TOUCHPAD);
-            LeftThumbstickDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.TOUCHPAD);
+            LeftThumbstick = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.primary2DAxisClick, out LeftThumbstick);
+            LeftThumbstick = prevBool == false && LeftThumbstick == true;
+            // LeftThumbstickDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.TOUCHPAD);
             LeftThumbstickUp = prevBool == true && LeftThumbstick == false;
 
             prevBool = RightThumbstick;
-            RightThumbstick = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.TOUCHPAD);
-            RightThumbstickDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.TOUCHPAD);
+            RightThumbstick = InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.primary2DAxisClick, out RightThumbstick);
+            RightThumbstick = prevBool == false && RightThumbstick == true;
+            //RightThumbstickDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.TOUCHPAD);
             RightThumbstickUp = prevBool == true && RightThumbstick == false;
 
-            LeftThumbNear = Pvr_UnitySDKAPI.Controller.UPvr_IsTouching(leftHand);
-            RightThumbNear = Pvr_UnitySDKAPI.Controller.UPvr_IsTouching(rightHand);
+            //LeftThumbNear = Pvr_UnitySDKAPI.Controller.UPvr_IsTouching(leftHand);
+            // RightThumbNear = Pvr_UnitySDKAPI.Controller.UPvr_IsTouching(rightHand);
+            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.primary2DAxisTouch, out LeftThumbNear);
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.primary2DAxisTouch, out RightThumbNear);
 
             prevVal = LeftGrip;
-            LeftGrip = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Left) ? 1f : 0;
-            LeftGripDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Left);
-
+            bool BLeftGrip;
+            //LeftGrip = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.gripButton, out BLeftGrip) ? 1f : 0;
+            //LeftGripDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Left);
+            //LeftGripDown = BLeftGrip == true;
+            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.grip, out LeftGrip);
+            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.gripButton, out BLeftGrip);
+            if (BLeftGrip)
+            {
+                LeftGripDown = BLeftGrip;
+            }
+            else
+            {
+                LeftGripDown = false;
+            }
             prevVal = RightGrip;
-            RightGrip = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Right) ? 1f : 0;
-            RightGripDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Right);
+            bool BRightGrip;
+            //RightGrip = InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.grip, out RightGrip) ? 1f : 0;
+            //RightGripDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Right);
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.grip, out RightGrip);
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.gripButton, out BRightGrip);
+            if (BRightGrip)
+            {
+                RightGripDown = BRightGrip;
+            }
+            else
+            {
+                RightGripDown = false;
+            }
 
             prevVal = LeftTrigger;
-            LeftTrigger = Pvr_UnitySDKAPI.Controller.UPvr_GetControllerTriggerValue(leftHand) / 255f;                        
+            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.trigger, out LeftTrigger);
+            //LeftTrigger = LeftTrigger / 255f;
             LeftTriggerUp = prevVal > _downThreshold && LeftTrigger < _downThreshold;
             LeftTriggerDown = prevVal < _downThreshold && LeftTrigger >= _downThreshold;
 
             prevVal = RightTrigger;
-            RightTrigger = Pvr_UnitySDKAPI.Controller.UPvr_GetControllerTriggerValue(rightHand) / 255f;
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(UnityEngine.XR.CommonUsages.trigger, out RightTrigger);
+            //RightTrigger = RightTrigger / 255f;
             RightTriggerUp = prevVal > _downThreshold && RightTrigger < _downThreshold;
             RightTriggerDown = prevVal < _downThreshold && RightTrigger >= _downThreshold;
 
             prevBool = AButton;
-            AButton = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.A);
-            AButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.A);
-            AButtonUp = prevBool == true && AButton == false;
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out AButton);
+            if (AButton)
+            {
+                Debug.Log("InputTest");
+                AButtonDown = true;
+                AButtonUp = false;
+            }
+            else
+            {
+                AButtonDown = false;
+                AButtonUp = true;
+            }
+
+            //AButton = prevBool == false && AButton == true;
+            ////AButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.A);
+            //AButtonUp = prevBool == true && AButton == false;
 
             prevBool = BButton;
-            BButton = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.B);
-            BButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.B);
-            BButtonUp = prevBool == true && BButton == false;
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.secondaryButton, out BButton);
+            if (BButton)
+            {
+                BButtonDown = true;
+                BButtonUp = false;
+            }
+            else
+            {
+                BButtonDown = false;
+                BButtonUp = true;
+            }
+            //BButton = prevBool == false && BButton == true;
+            ////BButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(rightHand, Pvr_UnitySDKAPI.Pvr_KeyCode.B);
+            //BButtonUp = prevBool == true && BButton == false;
 
             prevBool = XButton;
-            XButton = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.X);
-            XButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.X);
-            XButtonUp = prevBool == true && XButton == false;
+            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.primaryButton, out XButton);
+            if (XButton)
+            {
+                XButtonDown = true;
+                XButtonUp = false;
+            }
+            else
+            {
+                XButtonDown = false;
+                XButtonUp = true;
+            }
+            //XButton = prevBool == false && XButton == true;
+            ////XButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.X);
+            //XButtonUp = prevBool == true && XButton == false;
 
             prevBool = YButton;
-            YButton = Pvr_UnitySDKAPI.Controller.UPvr_GetKey(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Y);
-            YButtonDown = prevBool == false && YButton == true;
-            // Alternatively :
-            // YButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Y);
-            YButtonUp = prevBool == true && YButton == false;
-#endif
+            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.secondaryButton, out YButton);
+            if (YButton)
+            {
+                YButtonDown = true;
+                YButtonUp = false;
+            }
+            else
+            {
+                YButtonDown = false;
+                YButtonUp = true;
+            }
+            //YButtonDown = prevBool == false && YButton == true;
+            //// Alternatively :
+            //// YButtonDown = Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(leftHand, Pvr_UnitySDKAPI.Pvr_KeyCode.Y);
+            //YButtonUp = prevBool == true && YButton == false;
         }
 
         #endregion

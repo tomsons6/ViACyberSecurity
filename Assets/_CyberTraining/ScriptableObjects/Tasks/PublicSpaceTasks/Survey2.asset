@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: Survey2
   m_EditorClassIdentifier: 
   TaskName: Survey
+  TaskNameLV: Aptauja
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: A person comes up to ask questions about cybersecurity
+  TaskDescriptionLV: "Pien\u0101k persona un jaut\u0101 par kiberdro\u0161\u012Bbu"
   TaskAsnwer1: Decline to complete the survey, where private data is being used
+  TaskAnswer1LV: "Atsakies aizpild\u012Bt anketu kur\u0101 tiek izmantoti priv\u0101tie
+    dati"
   TaskAsnwer2: Decline to complete the survey
+  TaskAnswer2LV: "Atsakies aizpild\u012Bt anketu"
   TaskAsnwer3: Aswer the questions
+  TaskAnswer3LV: "Atbildi uz jaut\u0101jumiem"
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 1

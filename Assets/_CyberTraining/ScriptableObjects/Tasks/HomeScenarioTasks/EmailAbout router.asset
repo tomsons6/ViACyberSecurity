@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: EmailAbout router
   m_EditorClassIdentifier: 
   TaskName: Email about new router
+  TaskNameLV: "Epasts par jauno r\u016Bteri"
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Look at email
+  TaskDescriptionLV: Epasta apskate
   TaskAsnwer1: Not sure if you have ordered something
+  TaskAnswer1LV: "Neesmu p\u0101rliecin\u0101ts vai pas\u016Btiju"
   TaskAsnwer2: Open without reading
+  TaskAnswer2LV: "Atv\u0113rt bez las\u012B\u0161anas"
   TaskAsnwer3: Probably a real letter, should double check
+  TaskAnswer3LV: "Iesp\u0113jas \u012Bsts epasts, vajadz\u0113tu k\u0101rt\u012Bgi
+    p\u0101rbaud\u012Bt"
   EmailLetter: {fileID: 11400000, guid: bbc8c71c025354b428211a68ff6cc67e, type: 2}
   Answer1: 1
   Answer2: 0

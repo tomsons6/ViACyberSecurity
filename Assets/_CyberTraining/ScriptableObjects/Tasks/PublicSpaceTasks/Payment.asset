@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: Payment
   m_EditorClassIdentifier: 
   TaskName: Payment
+  TaskNameLV: Samaksa
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Time to pay for the drink
+  TaskDescriptionLV: "Laiks samaks\u0101t par dz\u0113rienu"
   TaskAsnwer1: Give the card to the employee to run the trasaction
+  TaskAnswer1LV: "Iedod karti darbiniekam, lai tas veiktu apmaksas apstr\u0101di"
   TaskAsnwer2: 
+  TaskAnswer2LV: 
   TaskAsnwer3: Pay with the card yourself.
+  TaskAnswer3LV: "Samaks\u0101 pats"
   EmailLetter: {fileID: 0}
   Answer1: 0
   Answer2: 0

@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: PackageDelivery
   m_EditorClassIdentifier: 
   TaskName: Package delivery
+  TaskNameLV: "Pakas pieg\u0101de"
   TaskPrompt: Go to the door
+  TaskPromptLV: "Aizej pie durv\u012Bm"
   TaskDescription: Open door
+  TaskDescriptionLV: Atver durvis
   TaskAsnwer1: Make sure about contact info, get package, allow for setup
+  TaskAnswer1LV: "P\u0101rliecin\u0101ties par sa\u0146\u0113m\u0113ja inform\u0101ciju,
+    sa\u0146emt paku un \u013Caut uzst\u0101di"
   TaskAsnwer2: Ignore
+  TaskAnswer2LV: "Ignor\u0113t"
   TaskAsnwer3: Setup yourself
+  TaskAnswer3LV: "Sa\u0146emt paku un pats uzst\u0101di iek\u0101rtu"
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 0

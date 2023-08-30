@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: UpdateRouter
   m_EditorClassIdentifier: 
   TaskName: Update router
+  TaskNameLV: "Atjaunin\u0101t r\u016Bteri"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Update the router
+  TaskDescriptionLV: "Atjaunini r\u016Bteri"
   TaskAsnwer1: Login to the router, update
+  TaskAnswer1LV: "Ielogoties r\u016Bter\u012B un atjaunin\u0101t"
   TaskAsnwer2: Skip update
+  TaskAnswer2LV: "Izlaist atjaunin\u0101jumu"
   TaskAsnwer3: Update now, and turn off updates
+  TaskAnswer3LV: "Atjaunin\u0101t \u0161oreiz un izsl\u0113gt atjaunin\u0101jumus"
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 0

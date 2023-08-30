@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: Antiviruss
   m_EditorClassIdentifier: 
   TaskName: Antiviruss popup
+  TaskNameLV: "Antiv\u012Brusa pazi\u0146ojums"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Update antiviruss and scan computer
+  TaskDescriptionLV: "Atjaunojat antiv\u012Brusu un nosken\u0113jat datoru"
   TaskAsnwer1: Update
+  TaskAnswer1LV: Atjaunot
   TaskAsnwer2: Update and scan
+  TaskAnswer2LV: "Atjaunot un nosken\u0113t"
   TaskAsnwer3: Ignore
+  TaskAnswer3LV: "Ignor\u0113t"
   EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 2

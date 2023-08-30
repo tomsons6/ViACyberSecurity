@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: MovieDonwload
   m_EditorClassIdentifier: 
   TaskName: Newest movie availible
+  TaskNameLV: "Jaun\u0101k\u0101s filmas"
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Newest movie is available in this torrent
+  TaskDescriptionLV: "Jaun\u0101k\u0101s filmas pieejamas torentos"
   TaskAsnwer1: I want to watch before buying
+  TaskAnswer1LV: "Gribu noskat\u012Bties pirms p\u0113rku"
   TaskAsnwer2: torrents are safe because I have linux
-  TaskAsnwer3: Pireted products usually have viruses and steal from the creators
+  TaskAnswer2LV: "Torenti ir dro\u0161i, jo man ir linux"
+  TaskAsnwer3: Pirated products usually have viruses and steal from the creators
+  TaskAnswer3LV: "Pir\u0101tiskajos produktos bie\u017Ei m\u0113dz b\u016Bt v\u012Brusi
+    un t\u0101 ir zag\u0161ana no veidot\u0101jiem."
   EmailLetter: {fileID: 11400000, guid: ee9066c5d3629db4f8b0b6c09202e948, type: 2}
   Answer1: 1
   Answer2: 0

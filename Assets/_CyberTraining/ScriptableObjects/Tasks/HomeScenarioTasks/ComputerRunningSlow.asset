@@ -13,11 +13,19 @@ MonoBehaviour:
   m_Name: ComputerRunningSlow
   m_EditorClassIdentifier: 
   TaskName: Slow device
+  TaskNameLV: "L\u0113ns dators"
   TaskPrompt: Touch the computer case
+  TaskPromptLV: "Pieskaries datora sist\u0113mblokam"
   TaskDescription: 'Computer is running slow, check the computer '
+  TaskDescriptionLV: "datora darb\u012Bba ir pal\u0113lin\u0101ta, nepiecie\u0161ams
+    veikt p\u0101rbaudi"
   TaskAsnwer1: Update system and run antiviruss software, clean computer from dust
+  TaskAnswer1LV: "veikt AV sken\u0113\u0161anu, sist\u0113mas p\u0101rbaudi, izt\u012Br\u012Bt
+    no putek\u013Ciem"
   TaskAsnwer2: Clean computer from dust
+  TaskAnswer2LV: "att\u012Br\u012Bt no putek\u013Ciem"
   TaskAsnwer3: I have windows, it's normal
+  TaskAnswer3LV: "Tas ir norm\u0101li, man ir WINDOWS "
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 1

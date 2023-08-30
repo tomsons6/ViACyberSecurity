@@ -13,12 +13,19 @@ MonoBehaviour:
   m_Name: Survey
   m_EditorClassIdentifier: 
   TaskName: Survey
+  TaskNameLV: Anketa
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: A person comes up and hands you anonymus survey
+  TaskDescriptionLV: "Persona pien\u0101k un iedod anketu"
   TaskAsnwer1: complete survey
+  TaskAnswer1LV: Aizpildi anketu
   TaskAsnwer2: look at the survey, ask where the data is going to be used, complete
     survey
+  TaskAnswer2LV: "Izp\u0113ti anketu, uzjaut\u0101 kur dati tiks izmantoti un aizpildi
+    anketu"
   TaskAsnwer3: Check for personal data use, ask where is the data going to be used
+  TaskAnswer3LV: "Izp\u0113ti k\u0101di dati tiek iev\u0101kti un kur tie tiks izmantoti"
   EmailLetter: {fileID: 0}
   Answer1: 0
   Answer2: 1

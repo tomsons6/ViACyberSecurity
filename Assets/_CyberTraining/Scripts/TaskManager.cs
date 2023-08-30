@@ -73,7 +73,6 @@ public class TaskManager : MonoBehaviour
 #if UNITY_ANDROID
         controller = GameObject.FindGameObjectWithTag("XrRig").GetComponentInChildren<TaskController>();
 #endif
-
         Programms = GameObject.FindGameObjectWithTag("Programms");
         ChangeTask();
     }

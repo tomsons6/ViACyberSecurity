@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: Webcam
   m_EditorClassIdentifier: 
   TaskName: Webcam light is on
+  TaskNameLV: "Kameras lampi\u0146a ir iesl\u0113gta"
   TaskPrompt: Touch webcam
+  TaskPromptLV: Pieskaries web kamerai
   TaskDescription: what should you do?
+  TaskDescriptionLV: "Ko dar\u012Bt?"
   TaskAsnwer1: Turn off webcam
+  TaskAnswer1LV: "Izsl\u0113gt web kameru"
   TaskAsnwer2: Close cover
+  TaskAnswer2LV: "Aizv\u0113rt v\u0101ci\u0146u"
   TaskAsnwer3: Ignore
+  TaskAnswer3LV: "Ignor\u0113t"
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 1

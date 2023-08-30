@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: ConnectWifi
   m_EditorClassIdentifier: 
   TaskName: Connect to wifi
+  TaskNameLV: "Piesl\u0113dzies bezvadu t\u012Bklam"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Connect to wifi
+  TaskDescriptionLV: "Piesl\u0113dzies bezvadu t\u012Bklam"
   TaskAsnwer1: Compare the wifi name with the name given in the checkout
+  TaskAnswer1LV: "Sal\u012Bdzini t\u012Bklu nosaukumus ar to kuru iedeva pie kases"
   TaskAsnwer2: Search for wifi by the name of the cafe
+  TaskAnswer2LV: "Mekl\u0113 t\u012Bklu p\u0113c kafejn\u012Bcas nosaukuma"
   TaskAsnwer3: Connect to the first open network
+  TaskAnswer3LV: "Piesl\u0113dzies pirmajam bezmaksas t\u012Bklam"
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 1

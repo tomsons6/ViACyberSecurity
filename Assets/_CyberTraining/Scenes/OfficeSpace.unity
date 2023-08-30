@@ -603,6 +603,11 @@ PrefabInstance:
       propertyPath: PlusOneEmailLogo
       value: 
       objectReference: {fileID: 1697634821}
+    - target: {fileID: 5315296681182506413, guid: 1187b1564903c2943995d28a19105e75,
+        type: 3}
+      propertyPath: CharacterControllerYOffset
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1187b1564903c2943995d28a19105e75, type: 3}
 --- !u!4 &1007096868 stripped

@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: NewGame
   m_EditorClassIdentifier: 
   TaskName: New game
+  TaskNameLV: "Jauna sp\u0113le"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: See an ad about a cool new game
+  TaskDescriptionLV: "Ieraugi rekl\u0101mu par jaunu sp\u0113li"
   TaskAsnwer1: check the developers reputation
+  TaskAnswer1LV: "Izp\u0113ti izstr\u0101d\u0101t\u0101ju uzticam\u012Bbu"
   TaskAsnwer2: install the game, because it already has thousands of users
+  TaskAnswer2LV: "ieinstal\u0113 sp\u0113li, jo tai jau ir t\u016Bksto\u0161iem lietot\u0101ju"
   TaskAsnwer3: Check the games and creators legitimacy and reputation
+  TaskAnswer3LV: "P\u0101rbaudi sp\u0113les un izstr\u0101d\u0101t\u0101ju uzticam\u012Bbu
+    un reput\u0101ciju"
   EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 0

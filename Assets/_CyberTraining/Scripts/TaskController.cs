@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -75,13 +75,27 @@ public class TaskController : MonoBehaviour
 #if PLATFORM_ANDROID
         MoveTaskCanva();
 #endif
-        TaskName.text = CurrentTask.TaskName;
-        TaskDescription.text = CurrentTask.TaskDescription;
-        TaskManager.Instance.currentTaskCount++;
-        TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " from " + TaskManager.Instance.TotalTaskCount(TaskManager.Instance.CurrentScenario).ToString();
-        Answer1.GetComponentInChildren<TMP_Text>().text = "Answer 1: " + CurrentTask.TaskAsnwer1;
-        Answer2.GetComponentInChildren<TMP_Text>().text = "Answer 2: " + CurrentTask.TaskAsnwer2;
-        Answer3.GetComponentInChildren<TMP_Text>().text = "Answer 3: " + CurrentTask.TaskAsnwer3;
+        if(LocalizationController.Instance.language == LocalizationController.Language.english)
+        {
+            TaskName.text = CurrentTask.TaskName;
+            TaskDescription.text = CurrentTask.TaskDescription;
+            TaskManager.Instance.currentTaskCount++;
+            TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " from " + TaskManager.Instance.TotalTaskCount(TaskManager.Instance.CurrentScenario).ToString();
+            Answer1.GetComponentInChildren<TMP_Text>().text = "Answer 1: " + CurrentTask.TaskAsnwer1;
+            Answer2.GetComponentInChildren<TMP_Text>().text = "Answer 2: " + CurrentTask.TaskAsnwer2;
+            Answer3.GetComponentInChildren<TMP_Text>().text = "Answer 3: " + CurrentTask.TaskAsnwer3;
+        }
+        else
+        {
+            TaskName.text = CurrentTask.TaskNameLV;
+            TaskDescription.text = CurrentTask.TaskDescriptionLV;
+            TaskManager.Instance.currentTaskCount++;
+            TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " no " + TaskManager.Instance.TotalTaskCount(TaskManager.Instance.CurrentScenario).ToString();
+            Answer1.GetComponentInChildren<TMP_Text>().text = "Atbilde 1: " + CurrentTask.TaskAnswer1LV;
+            Answer2.GetComponentInChildren<TMP_Text>().text = "Atbilde 2: " + CurrentTask.TaskAnswer2LV;
+            Answer3.GetComponentInChildren<TMP_Text>().text = "Atbilde 3: " + CurrentTask.TaskAnswer3LV;
+        }
+
     }
     public IEnumerator TaskPromtWrapper()
     {
@@ -103,7 +117,15 @@ public class TaskController : MonoBehaviour
 #endif
         TaskMainCanva.SetActive(false);
         TaskPromptCanva.SetActive(true);
-        TaskPromtText.text = CurrentTask.TaskPrompt;
+        if(LocalizationController.Instance.language == LocalizationController.Language.english)
+        {
+            TaskPromtText.text = CurrentTask.TaskPrompt;
+        }
+        else
+        {
+            TaskPromtText.text = CurrentTask.TaskPromptLV;
+        }
+
     }
 
     public void CloseTaskPromt()
@@ -156,7 +178,15 @@ public class TaskController : MonoBehaviour
         foreach (PressedAnswer Answer in TaskManager.Instance.AllAnswers)
         {
             GameObject TempAnswer = Instantiate(AnswerInfo, Content.transform);
-            TempAnswer.GetComponent<TMP_Text>().text = "Question " + i.ToString() + " - " + Answer.currentTask.TaskName + ", " + Answer.answer;
+            if(LocalizationController.Instance.language == LocalizationController.Language.english)
+            {
+                TempAnswer.GetComponent<TMP_Text>().text = "Question " + i.ToString() + " - " + Answer.currentTask.TaskName + ", " + Answer.answer;
+            }
+            else
+            {
+                TempAnswer.GetComponent<TMP_Text>().text = "Jautājums " + i.ToString() + " - " + Answer.currentTask.TaskName + ", " + Answer.answer;
+            }
+           
             i++;
         }
         ResultPanel.SetActive(true);

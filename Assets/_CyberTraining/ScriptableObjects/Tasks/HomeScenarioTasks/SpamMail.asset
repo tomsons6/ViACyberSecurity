@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: SpamMail
   m_EditorClassIdentifier: 
   TaskName: Email with attachement
+  TaskNameLV: Epasts ar pielikumu
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Look at email
+  TaskDescriptionLV: Apskati epastu
   TaskAsnwer1: Open everything and see the content
+  TaskAnswer1LV: "Atv\u0113rt visus pielikumus un apskat\u012Bt to saturu"
   TaskAsnwer2: Probably spam, should ignore
+  TaskAnswer2LV: "Iesp\u0113jams spams, vienk\u0101r\u0161i ignor\u0113t"
   TaskAsnwer3: Open email, but do not open the attachement
+  TaskAnswer3LV: "Atv\u0113rt epastu, bet nev\u0113rt va\u013C\u0101 pielikumus"
   EmailLetter: {fileID: 11400000, guid: 035b26848b3e4e94fa2adbf527c53ab5, type: 2}
   Answer1: 0
   Answer2: 2

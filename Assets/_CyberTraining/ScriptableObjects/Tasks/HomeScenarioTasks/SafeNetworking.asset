@@ -13,11 +13,19 @@ MonoBehaviour:
   m_Name: SafeNetworking
   m_EditorClassIdentifier: 
   TaskName: Safe networking
+  TaskNameLV: "Dro\u0161a interneta skat\u012B\u0161ana"
   TaskPrompt: Open internet browser
+  TaskPromptLV: "Atver interneta p\u0101rl\u016Bku"
   TaskDescription: Looking at the web there is a pop up about a not secure connection
+  TaskDescriptionLV: "Skatoties m\u0101jaslapu par\u0101d\u0101s pazi\u0146ojums"
   TaskAsnwer1: Everything is safe I have LINUX
+  TaskAnswer1LV: "Viss k\u0101rt\u012Bb\u0101, man ir linux"
   TaskAsnwer2: Check if the antiviruss has a safe connection functionallity
+  TaskAnswer2LV: "P\u0101rbaud\u012Bt vai antivirusam ir dro\u0161a interneta savienojuma
+    funkcija"
   TaskAsnwer3: Check if it is a system notification or just a fake page
+  TaskAnswer3LV: "P\u0101rbaud\u012Bt vai tas ir sist\u0113mas pazi\u0146ojums vai
+    ne\u012Bsta lapa"
   EmailLetter: {fileID: 0}
   Answer1: 0
   Answer2: 1

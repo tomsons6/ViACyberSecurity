@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: SmartAppliance
   m_EditorClassIdentifier: 
   TaskName: new smart appliance
+  TaskNameLV: "Jauna vied\u0101 iek\u0101rta"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Configure the appliance
+  TaskDescriptionLV: "Konfigur\u0113 iek\u0101rtu"
   TaskAsnwer1: Change default settings and password
+  TaskAnswer1LV: "Nomaini standarta iestat\u012Bjumus un paroles"
   TaskAsnwer2: Change settings, leave password
+  TaskAnswer2LV: "Nomaini iestat\u012Bjums, bet paroli atst\u0101j"
   TaskAsnwer3: 'Plug in and forget about it '
+  TaskAnswer3LV: "Piesl\u0113dz iek\u0101rtu un aizmirsti par to"
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 1
