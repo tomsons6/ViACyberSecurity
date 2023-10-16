@@ -13,12 +13,19 @@ MonoBehaviour:
   m_Name: EmailFromBusinessPartner
   m_EditorClassIdentifier: 
   TaskName: Email from business partner
+  TaskNameLV: Epasts no biznesa partnera
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Recieved an email with an attachement from a business partner
+  TaskDescriptionLV: "Sa\u0146emts epasts ar pielikumu no biznesa partnera"
   TaskAsnwer1: open without checking
+  TaskAnswer1LV: "Atv\u0113rt bez p\u0101rbaud\u012B\u0161anas"
   TaskAsnwer2: 
+  TaskAnswer2LV: 
   TaskAsnwer3: If email is expected and with the correct topics, then proceed to
     open
+  TaskAnswer3LV: "P\u0101rliecin\u0101ties vai epasts ir gaid\u012Bts, tikai tad
+    atv\u0113rt pielikumus."
   EmailLetter: {fileID: 11400000, guid: 7ad4f871ab3f5a744a90406f6d167341, type: 2}
   Answer1: 0
   Answer2: 0

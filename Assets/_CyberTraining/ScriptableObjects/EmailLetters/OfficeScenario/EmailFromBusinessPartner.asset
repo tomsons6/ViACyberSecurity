@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: EmailFromBusinessPartner
   m_EditorClassIdentifier: 
   Sender: 'FROM: Company X'
+  SenderLV: "NO: Sadarb\u012Bbas uz\u0146\u0113mums"
   Title: 'TITLE: Business proposition'
+  TitleLV: "Temats: Sadarb\u012Bbas pied\u0101v\u0101jums"
   Body: Hello, can you please review the attachement for our business propositions.
     Thank you we will be waiting for your response.
+  BodyLV: "Labdien, l\u016Bgums apskat\u012Bt epasta pielikum\u0101 ats\u016Bt\u012Bto
+    sadarb\u012Bbas pied\u0101v\u0101jumu. Paldies par atbildi jau iepriek\u0161."

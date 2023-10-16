@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: FreeMovies
   m_EditorClassIdentifier: 
   Sender: 'FROM: FreeMovies.free'
+  SenderLV: 'NO: BezmaksasFilmas.Lv'
   Title: 'TITLE: Newest free movie'
+  TitleLV: "Temats: Jaun\u0101k\u0101s filmas"
   Body: Download the newest free movies here - Http://www.FreeMovies.free
+  BodyLV: "Lejupiel\u0101d\u0113 jaun\u0101j\u0101s filmas \u0161eit - Http://www.BezmaksasFilmas.lv"

@@ -20,7 +20,7 @@ public class TaskController : MonoBehaviour
     [SerializeField]
     TMP_Text TaskPromtText;
     [SerializeField]
-    GameObject TaskPromptCanva;
+    public GameObject TaskPromptCanva;
     [SerializeField]
     GameObject TaskMainCanva;
     [SerializeField]
@@ -174,6 +174,31 @@ public class TaskController : MonoBehaviour
         {
             TaskMainCanva.SetActive(false);
         }
+        foreach(TMP_Text txtfield in ResultPanel.GetComponentsInChildren<TMP_Text>(true))
+        {
+            if(txtfield.name == "Title")
+            {
+                if(LocalizationController.Instance.language == LocalizationController.Language.english)
+                {
+                    txtfield.text = "Results";
+                }
+                else
+                {
+                    txtfield.text = "Rezultāti";
+                }
+            }
+            if(txtfield.name == "BackButtonTxt")
+            {
+                if(LocalizationController.Instance.language == LocalizationController.Language.english)
+                {
+                    txtfield.text = "Back to menu";
+                }
+                else
+                {
+                    txtfield.text = "Atpakaļ uz sākumu";
+                }
+            }
+        }
         int i = 1;
         foreach (PressedAnswer Answer in TaskManager.Instance.AllAnswers)
         {
@@ -184,7 +209,18 @@ public class TaskController : MonoBehaviour
             }
             else
             {
-                TempAnswer.GetComponent<TMP_Text>().text = "Jautājums " + i.ToString() + " - " + Answer.currentTask.TaskName + ", " + Answer.answer;
+                if(Answer.answer == Task.AnswerGrading.notCorrect)
+                {
+                    TempAnswer.GetComponent<TMP_Text>().text = "Jautājums " + i.ToString() + " - " + Answer.currentTask.TaskNameLV + ", " + "nepareizi";
+                }
+                if(Answer.answer == Task.AnswerGrading.semiCorrect)
+                {
+                    TempAnswer.GetComponent<TMP_Text>().text = "Jautājums " + i.ToString() + " - " + Answer.currentTask.TaskNameLV + ", " + "daļēji pareizi";
+                }
+                if (Answer.answer == Task.AnswerGrading.Correct)
+                {
+                    TempAnswer.GetComponent<TMP_Text>().text = "Jautājums " + i.ToString() + " - " + Answer.currentTask.TaskNameLV + ", " + "pareizi";
+                }
             }
            
             i++;

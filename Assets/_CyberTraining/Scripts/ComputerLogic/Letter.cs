@@ -29,8 +29,17 @@ public class Letter : MonoBehaviour
         TP_Header = this.transform.root.FindChildRecursive("Header").GetComponent<TMP_Text>();
         TP_LetterMainBody = this.transform.root.FindChildRecursive("Body").GetComponent<TMP_Text>();
         PlusOneIcon = GameObject.Find("PlusOnelogo");
-        TP_Sender.text = letter.Sender;
-        TP_Title.text = letter.Title;
+        if(LocalizationController.Instance.language == LocalizationController.Language.english)
+        {
+            TP_Sender.text = letter.Sender;
+            TP_Title.text = letter.Title;
+        }
+        else
+        {
+            TP_Sender.text = letter.SenderLV;
+            TP_Title.text = letter.TitleLV;
+        }
+
     }
 
     void OpenLetterWrapper()
@@ -44,8 +53,17 @@ public class Letter : MonoBehaviour
         TaskManager.Instance.controller.CloseTaskPromt();
 #endif
         if (PlusOneIcon != null) { PlusOneIcon.SetActive(false); }
-        TP_Header.text = letter.Sender + "   " + letter.Title;
-        TP_LetterMainBody.text = letter.Body;
+        if(LocalizationController.Instance.language == LocalizationController.Language.english) 
+        {
+            TP_Header.text = letter.Sender + "   " + letter.Title;
+            TP_LetterMainBody.text = letter.Body;
+        }
+        else
+        {
+            TP_Header.text = letter.SenderLV + "   " + letter.TitleLV;
+            TP_LetterMainBody.text = letter.BodyLV;
+        }
+
         yield return new WaitForSeconds(3f);
         if (GetComponent<TaskActivator>().enabled)
         {

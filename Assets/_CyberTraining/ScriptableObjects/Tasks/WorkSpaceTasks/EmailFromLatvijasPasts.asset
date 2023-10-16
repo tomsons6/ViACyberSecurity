@@ -13,12 +13,20 @@ MonoBehaviour:
   m_Name: EmailFromLatvijasPasts
   m_EditorClassIdentifier: 
   TaskName: 'Email about a package '
+  TaskNameLV: "Epasts par pieg\u0101di"
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Email about a package from LatvijasPasts
+  TaskDescriptionLV: "Epasts par pieg\u0101di no Latvijas pasta"
   TaskAsnwer1: check email content
+  TaskAnswer1LV: "Atv\u0113rt epasta saturu"
   TaskAsnwer2: open link attachements to see the package delivery status
+  TaskAnswer2LV: "Atv\u0113rt epasta pielikumus, lai apskat\u012Btos pieg\u0101des
+    statusu."
   TaskAsnwer3: Check if there is an actual package, look it up on a different link,
     other than provided in the letter
+  TaskAnswer3LV: "P\u0101rliecin\u0101ties vai visp\u0101r ir paredz\u0113ta pieg\u0101de
+    apskatoties citas saites nevis epasta pielikumu"
   EmailLetter: {fileID: 11400000, guid: c699b1863fa4e974aaae6f8bee646ff2, type: 2}
   Answer1: 1
   Answer2: 0

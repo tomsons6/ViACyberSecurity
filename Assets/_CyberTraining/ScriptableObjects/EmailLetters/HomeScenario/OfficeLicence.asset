@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: OfficeLicence
   m_EditorClassIdentifier: 
   Sender: 'FROM: Microsoft'
+  SenderLV: 'NO: Microsoft'
   Title: 'TITLE: MS Office licence'
+  TitleLV: 'Temats: MS Office licence'
   Body: Your office licence is ending soon. Please renew you licence.
+  BodyLV: "J\u016Bsu ofisa licence beigsies dr\u012Bz. L\u016Bdz autjaunojat licenci."

@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: EmailFromLatvijasPasts
   m_EditorClassIdentifier: 
   Sender: 'FROM: Latvijas pasts'
+  SenderLV: 'NO: Latvijas pasts'
   Title: 'TITLE: Package delivery'
+  TitleLV: "Temats: Paka pieg\u0101de"
   Body: Good day, we are informing you about a package delivery.
+  BodyLV: "Inform\u0101jam j\u016Bs par pakas pieg\u0101di, kas notiks r\u012Btdien
+    laika posm\u0101 no 11:00 - 13:00."

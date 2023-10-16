@@ -11736,7 +11736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49877b2c8de1d6e4ebc9ca5d8ea02d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: 3
+  InputSource: 0
   actionSet: {fileID: -944628639613478452, guid: e39f4b35a6db18348b41eb0262520e69,
     type: 3}
   TrackingOrigin: 2

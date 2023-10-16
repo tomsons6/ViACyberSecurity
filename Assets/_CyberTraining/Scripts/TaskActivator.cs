@@ -6,6 +6,7 @@ public class TaskActivator : MonoBehaviour
 {
     [SerializeField]
     public Task ActivationTask;
+    public bool isInteracable = false;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "grabber")
@@ -13,7 +14,6 @@ public class TaskActivator : MonoBehaviour
             TaskActivation();
         }
     }
-
     public void TaskActivation()
     {
         if(ActivationTask == TaskManager.Instance.controller.CurrentTask)

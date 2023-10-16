@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: EmailFromBoard
   m_EditorClassIdentifier: 
   Sender: 'FROM: Company board'
+  SenderLV: "NO: Uz\u0146\u0113muma vad\u012Bba"
   Title: 'TITLE: Meeting'
+  TitleLV: "Temats: Tik\u0161an\u0101s"
   Body: Good day, we have a scheduled meeting tomorrow at 13:45.
+  BodyLV: "Labdien, atg\u0101dinu par r\u012Btdienas tik\u0161anos plkst. 13:45."

@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: ChatWithBoss
   m_EditorClassIdentifier: 
   TaskName: Chat with boss
+  TaskNameLV: "Saruna ar vad\u012Bt\u0101ju"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Boss asks to have a short chat
+  TaskDescriptionLV: "Vad\u012Bt\u0101js ir uzaicin\u0101jis uz \u012Bsu sarunu"
   TaskAsnwer1: Leave as is and go
+  TaskAnswer1LV: "Dodies pie vad\u012Bt\u0101ja"
   TaskAsnwer2: 'Lock up pc and go '
+  TaskAnswer2LV: "Aizsl\u0113dz datoru un dodies"
   TaskAsnwer3: Turn off monitor and go
+  TaskAnswer3LV: "Izsl\u0113dz monitoru un dodies"
   EmailLetter: {fileID: 0}
   Answer1: 0
   Answer2: 2

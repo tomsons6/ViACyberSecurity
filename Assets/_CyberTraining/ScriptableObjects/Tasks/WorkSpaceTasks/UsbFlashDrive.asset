@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: UsbFlashDrive
   m_EditorClassIdentifier: 
   TaskName: Usb flash drive
+  TaskNameLV: "Usb zibatmi\u0146a"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: You found a flash drive coming back from a meeting
+  TaskDescriptionLV: "Tu atradi usb zibatmi\u0146u n\u0101kot atpaka\u013C uz kabinetu"
   TaskAsnwer1: Plug in usb to an isolated system
+  TaskAnswer1LV: "Piesl\u0113gt zibatmi\u0146u pie izol\u0113tas sist\u0113mas"
   TaskAsnwer2: Plug in usb to try to deduce who owns it
+  TaskAnswer2LV: "Piesl\u0113gt zibatmi\u0146u, lai m\u0113\u0123in\u0101tu noskaidrot
+    kam t\u0101 pieder"
   TaskAsnwer3: Do not put it into your system, give it to IT administrators
+  TaskAnswer3LV: "Atdot zibatmi\u0146u IT sist\u0113mu administratoriem"
   EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 0

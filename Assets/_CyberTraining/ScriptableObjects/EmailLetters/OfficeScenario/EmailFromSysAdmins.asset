@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: EmailFromSysAdmins
   m_EditorClassIdentifier: 
   Sender: 'FROM: System administrators'
+  SenderLV: "NO: Sist\u0113mas administrators"
   Title: 'TITLE: System restart'
+  TitleLV: "Temats: Sist\u0113mas restarts"
   Body: Hello, we are informing you about a system restart that will happen one week
     from now.
+  BodyLV: "Sveiki, inform\u0113jam j\u016Bs par sist\u0113mas restartu, kas notiks
+    p\u0113c ned\u0113\u013Cas."

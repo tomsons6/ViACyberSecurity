@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: EmailFromBoard
   m_EditorClassIdentifier: 
   TaskName: Email from board
+  TaskNameLV: "Epasts no vad\u012Bbas"
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Email from the board of company about a meeting
+  TaskDescriptionLV: "Epasts no vad\u012Bbas par sapulci"
   TaskAsnwer1: check email content
+  TaskAnswer1LV: "P\u0101rbaudi epasta saturu"
   TaskAsnwer2: check about the meeting in a different comunication way
+  TaskAnswer2LV: "P\u0101rbaudi par sapulci caur citiem sazi\u0146as kan\u0101liem"
   TaskAsnwer3: email is coming from the board, all should be good.
+  TaskAnswer3LV: "Epasts n\u0101k no vad\u012Bbas, visam vajadz\u0113tu b\u016Bt
+    k\u0101rt\u012Bb\u0101"
   EmailLetter: {fileID: 11400000, guid: 0bfc47f438dd2b74c91fd94399891b48, type: 2}
   Answer1: 1
   Answer2: 2

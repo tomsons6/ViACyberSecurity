@@ -8,6 +8,8 @@ public class MainMenuController : MonoBehaviour
 {
     int selectedScene;
     [SerializeField]
+    TMP_Text title;
+    [SerializeField]
     GameObject ResetGameQuestion;
     [SerializeField]
     TMP_Text homeScenario;
@@ -54,15 +56,18 @@ public class MainMenuController : MonoBehaviour
     {
         if(LocalizationController.Instance.language == LocalizationController.Language.english)
         {
+            title.text = "CHOOSE SCENARIO";
             homeScenario.text = "HOME SPACE";
             publicScenario.text = "PUBLIC SPACE";
             workScenario.text = "WORK SPACE";
             question.text = "START NEW GAME?";
             yesField.text = "YES";
             noField.text = "NO";
+            
         }
         else
         {
+            title.text = "IZVĒLIES SCENĀRIJU";
             homeScenario.text = "MĀJAS VIDE";
             publicScenario.text = "PUBLISKĀ VIDE";
             workScenario.text = "DARBA VIDE";

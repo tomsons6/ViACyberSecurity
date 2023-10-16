@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: SystemUpdate
   m_EditorClassIdentifier: 
   TaskName: System update
+  TaskNameLV: "Sist\u0113mas atjaunin\u0101jums"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: System popup with requesting a restart
+  TaskDescriptionLV: "Sist\u0113mas pazi\u0146ojums par restart\u0113\u0161anu"
   TaskAsnwer1: postpone restart
+  TaskAnswer1LV: "Aiztur\u0113t restartu uz noteiktu laiku"
   TaskAsnwer2: do not restart
+  TaskAnswer2LV: "nerestart\u0113t"
   TaskAsnwer3: Accept the restart
+  TaskAnswer3LV: "Uzsk\u0101t sist\u0113mas restart\u0113\u0161anu"
   EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 0

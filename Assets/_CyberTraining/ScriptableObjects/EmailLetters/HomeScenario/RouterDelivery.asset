@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: RouterDelivery
   m_EditorClassIdentifier: 
   Sender: 'FROM: MikroTik'
+  SenderLV: 'NO: MikroTik'
   Title: 'TITLE:  New router'
+  TitleLV: "Temats: Jauns r\u016Bteris"
   Body: Dear customer, we want to inform you about the new router delivery. It will
     be delivered in the nex 1-3 business days.
+  BodyLV: "D\u0101rgais klient, m\u0113s v\u0113lamies j\u016Bs inform\u0113t par
+    jaun\u0101 r\u016Btera pieg\u0101di."

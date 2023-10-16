@@ -50,6 +50,23 @@ public class TaskManager : MonoBehaviour
         //ClearSavedGame();
 
     }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            if(controller.CurrentTask.TaskPrompt != "")
+            {
+                if (controller.TaskPromptCanva.activeInHierarchy)
+                {
+                    controller.CloseTaskPromt();
+                }
+                else
+                {
+                    controller.TaskPromt();
+                }
+            }
+        }
+    }
     void OnSceneChangeWrapper(Scene current, Scene Next)
     {
         if (Next.buildIndex == 0)
@@ -84,6 +101,28 @@ public class TaskManager : MonoBehaviour
     {
         CurrentScenario = selectScenario;
     }
+    public void EnableInteraction(Task currentTask)
+    {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Interactable"))
+        {
+            TaskActivator tmpTaskActivator;
+            tmpTaskActivator = go.GetComponent<TaskActivator>();
+            Debug.Log(GameObject.FindGameObjectsWithTag("Interactable").Length + go.name);
+            if (tmpTaskActivator != null)
+            {
+                if (tmpTaskActivator.ActivationTask == currentTask)
+                {
+                    tmpTaskActivator.isInteracable = true;
+                    Debug.Log(go.name + " enable interact");
+                    return;
+                }
+                else
+                {
+                    tmpTaskActivator.isInteracable = false;
+                }
+            }
+        }
+    }
     public void ChangeTask()
     {
         TaskStarted = false;
@@ -100,8 +139,10 @@ public class TaskManager : MonoBehaviour
         }
         foreach (Task task in CurrentScenario.tasks)
         {
+
             if (!task.taskCompleted)
             {
+                EnableInteraction(task);
                 controller.CurrentTask = task;
 #if UNITY_STANDALONE || UNITY_WEBGL
                 if (task.TaskPrompt == "")

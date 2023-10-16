@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: EmailFromBoss
   m_EditorClassIdentifier: 
   TaskName: Email from boss
+  TaskNameLV: "Epasts no vad\u012Bt\u0101ja"
   TaskPrompt: Check email
+  TaskPromptLV: "P\u0101rbaudi epastu"
   TaskDescription: Boss asks to check the banks balance
+  TaskDescriptionLV: "Vad\u012Bt\u0101js pal\u016Bdz ats\u016Bt\u012Bt konta izrakstus"
   TaskAsnwer1: Confirm in a different comunication way if that was a legitamet request
+  TaskAnswer1LV: "P\u0101rliecin\u0101ties par l\u016Bgumu caur citiem sazi\u0146u
+    kan\u0101liem"
   TaskAsnwer2: 
+  TaskAnswer2LV: 
   TaskAsnwer3: Ask for a confirmation in an email response
+  TaskAnswer3LV: "P\u0101rjaut\u0101t vad\u012Bt\u0101jam par l\u016Bgumu caur epastu"
   EmailLetter: {fileID: 11400000, guid: e50a09957b3d18540a107052558904de, type: 2}
   Answer1: 2
   Answer2: 0

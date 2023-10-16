@@ -6,6 +6,9 @@ using UnityEngine;
 public class EmailLetter : ScriptableObject
 {
     public string Sender = "FROM: ";
+    public string SenderLV = "NO: ";
     public string Title = "TITLE: ";
+    public string TitleLV = "Temats: ";
     public string Body;
+    public string BodyLV;
 }

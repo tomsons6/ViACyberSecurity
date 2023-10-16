@@ -13,11 +13,21 @@ MonoBehaviour:
   m_Name: NewEmployee
   m_EditorClassIdentifier: 
   TaskName: New employee
+  TaskNameLV: Jauns darbinieks
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Spot a new employee without an ID and no one knows him
+  TaskDescriptionLV: "Tu ieraugi jaunu darbinieku be ID kartes un neviens vi\u0146u
+    nezin"
   TaskAsnwer1: Ask who he is, where is his ID, contact security
+  TaskAnswer1LV: "Uzjaut\u0101t kas vi\u0146\u0161 ir un kur ir vi\u0146a ID karte,
+    sazin\u0101ties ar apsardzi"
   TaskAsnwer2: Ask who he is and what is he doing here
+  TaskAnswer2LV: "Uzjaut\u0101t kas vi\u0146\u0161 ir un ko vi\u0146\u0161 \u0161eit
+    dara"
   TaskAsnwer3: Ignore him, he probably forgot hes ID
+  TaskAnswer3LV: "Ignor\u0113t vi\u0146u, vi\u0146\u0161 dro\u0161vien aizmirsa ID
+    karti"
   EmailLetter: {fileID: 0}
   Answer1: 2
   Answer2: 1

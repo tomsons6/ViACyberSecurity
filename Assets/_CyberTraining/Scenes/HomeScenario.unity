@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 41f6442127e89d14ba2a5b9bf98a5dc8,
+  m_LightingDataAsset: {fileID: 112000000, guid: 805bd0cd487419348af861ec463e561e,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 9fa8438925214d34b98b16cbc2a15241,
     type: 2}
@@ -2510,26 +2510,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426280133}
   m_CullTransparentMesh: 1
---- !u!114 &441278185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582091029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &471114123
 GameObject:
   m_ObjectHideFlags: 0
@@ -8116,27 +8096,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 582091026}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &582091029 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 550311521, guid: 49f576a03ece56a4e9c640ed081f6a68,
-    type: 3}
-  m_PrefabInstance: {fileID: 582091026}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &582091030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 808951036455294808, guid: 49f576a03ece56a4e9c640ed081f6a68,
-    type: 3}
-  m_PrefabInstance: {fileID: 582091026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &582091031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 808951038486358080, guid: 49f576a03ece56a4e9c640ed081f6a68,
-    type: 3}
-  m_PrefabInstance: {fileID: 582091026}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &582091032 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 808951037094944040, guid: 49f576a03ece56a4e9c640ed081f6a68,
     type: 3}
   m_PrefabInstance: {fileID: 582091026}
   m_PrefabAsset: {fileID: 0}
@@ -8403,6 +8365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationTask: {fileID: 11400000, guid: 187085ae316e80e4da94a6d8893d90ec, type: 2}
+  isInteracable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -11118,6 +11081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationTask: {fileID: 11400000, guid: 41ae5e621ca18974789c1d2935f37400, type: 2}
+  isInteracable: 0
 --- !u!1 &1236311574
 GameObject:
   m_ObjectHideFlags: 0
@@ -11935,26 +11899,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476216366}
   m_CullTransparentMesh: 1
---- !u!114 &1486373044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582091030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1498107092
 GameObject:
   m_ObjectHideFlags: 0
@@ -13710,26 +13654,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824733784}
   m_CullTransparentMesh: 1
---- !u!114 &1830908456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582091032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1832739220
 GameObject:
   m_ObjectHideFlags: 0
@@ -14035,6 +13959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationTask: {fileID: 11400000, guid: bbe2f3c335435f24dbedda534c868d6e, type: 2}
+  isInteracable: 0
 --- !u!65 &1929117481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15008,6 +14933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FPSControllerGameScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988963321081659258, guid: 584c85214761e6d4baedb26408eb0991,
+        type: 3}
+      propertyPath: m_Name
+      value: BackButtonTxt
       objectReference: {fileID: 0}
     - target: {fileID: 7758014747469871963, guid: 584c85214761e6d4baedb26408eb0991,
         type: 3}

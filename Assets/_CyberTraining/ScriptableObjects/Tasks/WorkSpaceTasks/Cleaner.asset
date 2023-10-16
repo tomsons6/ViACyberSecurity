@@ -13,13 +13,21 @@ MonoBehaviour:
   m_Name: Cleaner
   m_EditorClassIdentifier: 
   TaskName: Cleaner
+  TaskNameLV: "Apkop\u0113ja"
   TaskPrompt: 
+  TaskPromptLV: 
   TaskDescription: Cleaner wants to clean the works space and asks to stand up and
     move away for a bit
+  TaskDescriptionLV: "Apkop\u0113ja pal\u016Bdz atst\u0101t darba vietu, lai var\u0113tu
+    izt\u012Br\u012Bt"
   TaskAsnwer1: Lock screen and step away
+  TaskAnswer1LV: "Aizl\u0113dz datoru un paej mal\u0101"
   TaskAsnwer2: Go out for a smoke or coffe while she is cleaning
+  TaskAnswer2LV: "Aizej p\u0113c kafija, kam\u0113r vi\u0146a t\u012Bra"
   TaskAsnwer3: Lock screen, clear desk of sensitive information (documents and usb),
     step away from device
+  TaskAnswer3LV: "Aizsl\u0113dz datoru, no\u0146em sensit\u012Bvos dokumentus no
+    galda un paej mal\u0101"
   EmailLetter: {fileID: 0}
   Answer1: 1
   Answer2: 0

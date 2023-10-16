@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: EmailFromBoss
   m_EditorClassIdentifier: 
   Sender: 'FROM: CEO'
+  SenderLV: "NO: Vad\u012Bt\u0101ja"
   Title: 'TITLE: Balance check'
+  TitleLV: 'Temats: Kontu atlikums'
   Body: Can you please check the company cards balance and send it to me.
+  BodyLV: "Vai vari l\u016Bdzu p\u0101rbaud\u012Bt m\u016Bsu uz\u0146\u0113muma konta
+    atlikumu un ats\u016Bt\u012Bt to man."

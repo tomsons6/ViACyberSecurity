@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: SpamMail
   m_EditorClassIdentifier: 
   Sender: 'FROM: Lottery'
+  SenderLV: 'NO: Loterija'
   Title: 'TITLE: You are a winner'
+  TitleLV: "Temats: J\u016Bs esat uzvar\u0113jis"
   Body: Congratulations on winning 1.000.000$ Click here to recieve the prize.
+  BodyLV: "Apsveicam, j\u016Bs esat uzvar\u0113jis 1.000.000 EUR, klik\u0161\u0137iniet
+    \u0161eit lai sa\u0146emu laimestu."

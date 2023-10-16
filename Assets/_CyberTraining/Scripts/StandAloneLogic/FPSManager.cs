@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Device;
 using UnityStandardAssets.Characters.FirstPerson;
@@ -28,6 +30,14 @@ public class FPSManager : MonoBehaviour
         Taskcanva.renderMode = 0;
         //Taskcanva.gameObject.SetActive(false);
         TaskManager.Instance.TaskDelegate += EnableCanvaWrapper;
+        if (LocalizationController.Instance.language == LocalizationController.Language.english)
+        {
+            PressEText.GetComponent<TMP_Text>().text = "Press E to touch";
+        }
+        else
+        {
+            PressEText.GetComponent<TMP_Text>().text = "Nospied E lai pieskartos";
+        }
     }
 
     // Update is called once per frame
@@ -58,7 +68,21 @@ public class FPSManager : MonoBehaviour
             //Debug.Log(objectHit.name);
             if (objectHit.CompareTag("Interactable"))
             {
-                PressEText.gameObject.SetActive(true);
+                if (objectHit.gameObject.GetComponent<TaskActivator>() != null)
+                {
+                    if (objectHit.gameObject.GetComponent<TaskActivator>().isInteracable)
+                    {
+                        PressEText.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        PressEText.gameObject.SetActive(false);
+                    }
+                }
+                else
+                {
+                    PressEText.gameObject.SetActive(true);
+                }
             }
             else
             {
@@ -87,7 +111,7 @@ public class FPSManager : MonoBehaviour
     }
     void EnablePCScreen(Transform RayCastObj)
     {
-        if(RayCastObj.GetComponentInParent<Canvas>() != null)
+        if (RayCastObj.GetComponentInParent<Canvas>() != null)
         {
             PCScreen = RayCastObj.GetComponentInParent<Canvas>();
             ScreenPosition = PCScreen.GetComponent<RectTransform>().position;
@@ -99,7 +123,7 @@ public class FPSManager : MonoBehaviour
     }
     public void DisablePCScreen()
     {
-        if(PCScreen != null)
+        if (PCScreen != null)
         {
             EnableControls(true);
             PCScreen.renderMode = RenderMode.WorldSpace;
