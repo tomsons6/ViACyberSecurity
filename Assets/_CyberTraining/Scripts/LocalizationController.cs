@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LocalizationController : MonoBehaviour
 {
@@ -22,6 +23,19 @@ public class LocalizationController : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
+        }
+    }
+    private void Start()
+    {
+        SceneManager.activeSceneChanged += OnSceneChange;
+
+    }
+    void OnSceneChange(Scene current, Scene next)
+    {
+        if (next.buildIndex == 0)
+        {
+            GameObject.Find("English").GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { SelectEnglish(); });
+            GameObject.Find("Latvian").GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { SelectLatvian(); });
         }
     }
     public void SelectLatvian()

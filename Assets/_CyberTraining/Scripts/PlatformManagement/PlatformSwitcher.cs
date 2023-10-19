@@ -46,10 +46,12 @@ public class PlatformSwitcher : MonoBehaviour
     void VRMode()
     {
         XrRig.SetActive(true);
+
         if (FPSController != null)
         {
             FPSController.SetActive(false);
         }
+        Camera.main.transform.rotation.Set(0f, 0f, 0f, 0f);
     }
     void StandaloneMode()
     {

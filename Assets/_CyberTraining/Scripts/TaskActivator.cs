@@ -19,6 +19,7 @@ public class TaskActivator : MonoBehaviour
         if(ActivationTask == TaskManager.Instance.controller.CurrentTask)
         {
             TaskManager.Instance.controller.StartTask();
+            isInteracable = false;
             this.enabled = false;
         }
     }

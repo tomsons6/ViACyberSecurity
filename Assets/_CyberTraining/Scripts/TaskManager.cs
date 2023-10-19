@@ -1,3 +1,4 @@
+using BNG;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ public class TaskManager : MonoBehaviour
     [SerializeField]
     public List<PressedAnswer> AllAnswers = new List<PressedAnswer>();
     GameObject Programms;
+    GameObject OpenedLetter;
     [SerializeField]
     Scenario HomeScenario;
     [SerializeField]
@@ -29,6 +31,8 @@ public class TaskManager : MonoBehaviour
     public bool TaskStarted;
 
     public int currentTaskCount;
+
+    public bool justLaunched = true;
 
     private void Awake()
     {
@@ -48,11 +52,11 @@ public class TaskManager : MonoBehaviour
     {
         SceneManager.activeSceneChanged += OnSceneChangeWrapper;
         //ClearSavedGame();
-
+        SubscribeToHomeMenuBtns();
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(InputBridge.Instance.AButtonDown)
         {
             if(controller.CurrentTask.TaskPrompt != "")
             {
@@ -72,9 +76,7 @@ public class TaskManager : MonoBehaviour
         if (Next.buildIndex == 0)
         {
             CurrentScenario = null;
-            GameObject.Find("HomeScenario").GetComponent<Button>().onClick.AddListener(delegate { ButtonPress(HomeScenario); });
-            GameObject.Find("PublicScenario").GetComponent<Button>().onClick.AddListener(delegate { ButtonPress(publicScenario); });
-            GameObject.Find("WorkScenario").GetComponent<Button>().onClick.AddListener(delegate { ButtonPress(workScenario); });
+            SubscribeToHomeMenuBtns();
         }
         else
         {
@@ -91,16 +93,25 @@ public class TaskManager : MonoBehaviour
         controller = GameObject.FindGameObjectWithTag("XrRig").GetComponentInChildren<TaskController>();
 #endif
         Programms = GameObject.FindGameObjectWithTag("Programms");
+        OpenedLetter = GameObject.Find("OpenedLetter");
+        CloseLetters();
+        ClosePrograms();
         ChangeTask();
+    }
+    void SubscribeToHomeMenuBtns()
+    {
+        GameObject.Find("HomeScenario").GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { ButtonPress(HomeScenario); });
+        GameObject.Find("PublicScenario").GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { ButtonPress(publicScenario); });
+        GameObject.Find("WorkScenario").GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { ButtonPress(workScenario); });
     }
     void ButtonPress(Scenario scenario)
     {
         CurrentScenario = scenario;
     }
-    public void SelectScenario(Scenario selectScenario)
-    {
-        CurrentScenario = selectScenario;
-    }
+    //public void SelectScenario(Scenario selectScenario)
+    //{
+    //    CurrentScenario = selectScenario;
+    //}
     public void EnableInteraction(Task currentTask)
     {
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Interactable"))
@@ -126,13 +137,9 @@ public class TaskManager : MonoBehaviour
     public void ChangeTask()
     {
         TaskStarted = false;
-        if (Programms != null)
-        {
-            foreach (Transform child in Programms.transform)
-            {
-                child.gameObject.SetActive(false);
-            }
-        }
+        CloseLetters();
+        ClosePrograms();
+
         if (CurrentScenario.tasks.All(x => x.taskCompleted))
         {
             controller.ShowResults();
@@ -193,6 +200,23 @@ public class TaskManager : MonoBehaviour
             }
         }
     }
+    public void ClosePrograms()
+    {
+        if (Programms != null)
+        {
+            foreach (Transform child in Programms.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
+    }
+    public void CloseLetters()
+    {
+        if (OpenedLetter != null)
+        {
+           OpenedLetter.gameObject.SetActive(false);
+        }
+    }
     public void ClearSavedGame()
     {
         foreach (Task task in CurrentScenario.tasks)
@@ -200,13 +224,23 @@ public class TaskManager : MonoBehaviour
             task.taskCompleted = false;
             AllAnswers.Clear();
         }
-        currentTaskCount = 0;
 #if UNITY_STANDALONE_WIN || UNITY_WEBGL
         if (controller != null)
         {
             controller.gameObject.GetComponentInParent<FPSManager>().Taskcanva = null;
         }
 #endif
+    }
+    public void CurrentTaskCount()
+    {
+        currentTaskCount = 1;
+        foreach(Task task in CurrentScenario.tasks)
+        {
+            if (task.taskCompleted)
+            {
+                currentTaskCount++;
+            }
+        }
     }
     public int TotalTaskCount(Scenario currentScenario)
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using BNG;
 
 public class TaskController : MonoBehaviour
 {
@@ -22,13 +23,13 @@ public class TaskController : MonoBehaviour
     [SerializeField]
     public GameObject TaskPromptCanva;
     [SerializeField]
-    GameObject TaskMainCanva;
+    public GameObject TaskMainCanva;
     [SerializeField]
-    Button Answer1;
+    UnityEngine.UI.Button Answer1;
     [SerializeField]
-    Button Answer2;
+    UnityEngine.UI.Button Answer2;
     [SerializeField]
-    Button Answer3;
+    UnityEngine.UI.Button Answer3;
     //EmailTasks
     [SerializeField]
     GameObject PlusOneEmailLogo;
@@ -43,9 +44,34 @@ public class TaskController : MonoBehaviour
     [SerializeField]
     GameObject ResultPanel;
     [SerializeField]
+    GameObject InGameMenu;
+    [SerializeField]
     GameObject AnswerInfo;
     [SerializeField]
     GameObject Content;
+    [SerializeField]
+    AudioSource Click;
+
+    private void Start()
+    {
+        TranslateIngameMenu();
+    }
+    private void Update()
+    {
+        if(InputBridge.Instance.XButtonDown || Input.GetKeyDown(KeyCode.R))
+        {
+            if(InGameMenu.activeInHierarchy)
+            {
+                InGameMenu.SetActive(false);
+                GetComponentInParent<FPSManager>().EnableControls(true);
+            }
+            else
+            {
+                InGameMenu.SetActive(true);
+                GetComponentInParent<FPSManager>().EnableControls(false);
+            }
+        }
+    }
 
     public void StartTask()
     {
@@ -72,6 +98,7 @@ public class TaskController : MonoBehaviour
             TaskPromptCanva.SetActive(false);
         }
         TaskMainCanva.SetActive(true);
+        SwitchColorWrapper();
 #if PLATFORM_ANDROID
         MoveTaskCanva();
 #endif
@@ -79,7 +106,7 @@ public class TaskController : MonoBehaviour
         {
             TaskName.text = CurrentTask.TaskName;
             TaskDescription.text = CurrentTask.TaskDescription;
-            TaskManager.Instance.currentTaskCount++;
+            TaskManager.Instance.CurrentTaskCount();
             TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " from " + TaskManager.Instance.TotalTaskCount(TaskManager.Instance.CurrentScenario).ToString();
             Answer1.GetComponentInChildren<TMP_Text>().text = "Answer 1: " + CurrentTask.TaskAsnwer1;
             Answer2.GetComponentInChildren<TMP_Text>().text = "Answer 2: " + CurrentTask.TaskAsnwer2;
@@ -89,7 +116,7 @@ public class TaskController : MonoBehaviour
         {
             TaskName.text = CurrentTask.TaskNameLV;
             TaskDescription.text = CurrentTask.TaskDescriptionLV;
-            TaskManager.Instance.currentTaskCount++;
+            TaskManager.Instance.CurrentTaskCount();
             TaskNumber.text = TaskManager.Instance.currentTaskCount.ToString() + " no " + TaskManager.Instance.TotalTaskCount(TaskManager.Instance.CurrentScenario).ToString();
             Answer1.GetComponentInChildren<TMP_Text>().text = "Atbilde 1: " + CurrentTask.TaskAnswer1LV;
             Answer2.GetComponentInChildren<TMP_Text>().text = "Atbilde 2: " + CurrentTask.TaskAnswer2LV;
@@ -103,11 +130,11 @@ public class TaskController : MonoBehaviour
         GetComponentInParent<FPSManager>().EnableControls(true);
 #endif
         TaskPromt();
-        yield return new WaitForSeconds(2f);
-        if (!TaskManager.Instance.TaskStarted)
-        {
-            CloseTaskPromt();
-        }
+        //yield return new WaitForSeconds(2f);
+        //if (!TaskManager.Instance.TaskStarted)
+        //{
+        //    CloseTaskPromt();
+        //}
         yield return null;
     }
     public void TaskPromt()
@@ -138,32 +165,66 @@ public class TaskController : MonoBehaviour
     public void Answer1Presed()
     {
         CurrentTask.taskCompleted = true;
-        if (!TaskManager.Instance.AllAnswers.Any(x => x.currentTask == CurrentTask))
-        {
-            TaskManager.Instance.AllAnswers.Add(new PressedAnswer(CurrentTask, CurrentTask.Answer1));
-        }
-        TaskManager.Instance.ChangeTask();
+        //if (!TaskManager.Instance.AllAnswers.Any(x => x.currentTask == CurrentTask))
+        //{
+        //    TaskManager.Instance.AllAnswers.Add(new PressedAnswer(CurrentTask, CurrentTask.Answer1));
+        //}
+        AnswerPressed(CurrentTask.Answer1);
+        Click.Play();
     }
     public void Answer2Pressed()
     {
         CurrentTask.taskCompleted = true;
-        if (!TaskManager.Instance.AllAnswers.Any(x => x.currentTask == CurrentTask))
-        {
-            TaskManager.Instance.AllAnswers.Add(new PressedAnswer(CurrentTask, CurrentTask.Answer2));
-        }
-        TaskManager.Instance.ChangeTask();
+        //if (!TaskManager.Instance.AllAnswers.Any(x => x.currentTask == CurrentTask))
+        //{
+        //    TaskManager.Instance.AllAnswers.Add(new PressedAnswer(CurrentTask, CurrentTask.Answer2));
+        //}
+        AnswerPressed(CurrentTask.Answer2);
+        Click.Play();
+
     }
     public void Answer3Pressed()
     {
         CurrentTask.taskCompleted = true;
+        AnswerPressed(CurrentTask.Answer3);
+
+    }
+    public void AnswerPressed(Task.AnswerGrading answer) 
+    {
         if (!TaskManager.Instance.AllAnswers.Any(x => x.currentTask == CurrentTask))
         {
-            TaskManager.Instance.AllAnswers.Add(new PressedAnswer(CurrentTask, CurrentTask.Answer3));
+            TaskManager.Instance.AllAnswers.Add(new PressedAnswer(CurrentTask, answer));
         }
-
         TaskManager.Instance.ChangeTask();
     }
+    void SwitchColorWrapper()
+    {
+        SwitchColorBtn(CurrentTask.Answer1, Answer1);
+        SwitchColorBtn(CurrentTask.Answer2, Answer2);
+        SwitchColorBtn(CurrentTask.Answer3, Answer3);
+    }
+    void SwitchColorBtn(Task.AnswerGrading answer,UnityEngine.UI.Button pressedButton)
+    {
+        switch (answer)
+        {
+            case Task.AnswerGrading.Correct:
+                SwitchColors(pressedButton, Color.green);
+                break;
+            case Task.AnswerGrading.semiCorrect:
+                SwitchColors(pressedButton, Color.cyan);
+                break;
+            case Task.AnswerGrading.notCorrect:
+                SwitchColors(pressedButton, Color.red);
+                break;
 
+        }
+    }
+    void SwitchColors(UnityEngine.UI.Button pressedButton, Color color)
+    {
+        var btnColors = pressedButton.colors;
+        btnColors.pressedColor = color;
+        pressedButton.colors = btnColors;
+    }
     public void ShowResults()
     {
         if (TaskPromptCanva.activeInHierarchy)
@@ -243,16 +304,49 @@ public class TaskController : MonoBehaviour
         Material Light = WebCamLight.GetComponent<Renderer>().material;
         Light.EnableKeyword("_EMISSION");
     }
-    public void BackToMainMenu()
+    public void BackToMainMenuClearGame()
     {
         TaskManager.Instance.ClearSavedGame();
+        TaskManager.Instance.CurrentScenario = null;
+        SceneManager.LoadScene(0);
+    }
+    public void TranslateIngameMenu()
+    {
+        foreach (TMP_Text txtfield in InGameMenu.GetComponentsInChildren<TMP_Text>(true))
+        {
+            if (txtfield.name == "Title")
+            {
+                if (LocalizationController.Instance.language == LocalizationController.Language.english)
+                {
+                    txtfield.text = "Menu";
+                }
+                else
+                {
+                    txtfield.text = "Izvēlne";
+                }
+            }
+            if (txtfield.name == "BackButtonTxt")
+            {
+                if (LocalizationController.Instance.language == LocalizationController.Language.english)
+                {
+                    txtfield.text = "Back to menu";
+                }
+                else
+                {
+                    txtfield.text = "Atpakaļ uz sākumu";
+                }
+            }
+        }
+    }
+    public void BackToMain()
+    {
         TaskManager.Instance.CurrentScenario = null;
         SceneManager.LoadScene(0);
     }
 #if UNITY_ANDROID
     public void MoveTaskCanva()
     {
-        this.transform.position = centreEyeAnchor.transform.position + centreEyeAnchor.transform.forward * 1f;
+        this.transform.position = centreEyeAnchor.transform.position + centreEyeAnchor.transform.forward * .75f;
         this.transform.LookAt(centreEyeAnchor.transform);
         this.transform.Rotate(0, 180f, 0);
     }

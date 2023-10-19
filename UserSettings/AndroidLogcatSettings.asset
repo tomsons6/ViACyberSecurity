@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "1WMHHA68GN2201",
+    "m_SelectedDeviceId": "PA8150MGGB251661G",
     "m_SelectedPackage": {
-        "deviceId": "1WMHHA68GN2201",
+        "deviceId": "PA8150MGGB251661G",
         "name": "com.VidzemesUniversity.CyberSecurityTraining",
-        "processId": 31004,
+        "processId": 10943,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,43 +11,43 @@
         {
             "deviceId": "1WMHHA68GN2201",
             "name": "com.VidzemesUniversity.CyberSecurityTraining",
-            "processId": 11407,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA68GN2201",
-            "name": "com.VidzemesUniversity.CyberSecurityTraining",
-            "processId": 4865,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA68GN2201",
-            "name": "com.oculus.xrstreamingclient",
-            "processId": 6359,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA68GN2201",
-            "name": "com.VidzemesUniversity.CyberSecurityTraining",
-            "processId": 6797,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA68GN2201",
-            "name": "com.oculus.shellenv",
-            "processId": 2045,
-            "exited": false
-        },
-        {
-            "deviceId": "1WMHHA68GN2201",
-            "name": "com.VidzemesUniversity.CyberSecurityTraining",
             "processId": 8332,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "1WMHHA68GN2201",
             "name": "com.VidzemesUniversity.CyberSecurityTraining",
             "processId": 31004,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 10254,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 17700,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.oculus.shellenv",
+            "processId": 2073,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 21072,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 29413,
             "exited": false
         },
         {
@@ -90,6 +90,18 @@
             "deviceId": "PA8150MGGB251661G",
             "name": "com.VidzemesUniversity.CyberSecurityTraining",
             "processId": 17614,
+            "exited": false
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 7619,
+            "exited": false
+        },
+        {
+            "deviceId": "PA8150MGGB251661G",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 10943,
             "exited": false
         }
     ],

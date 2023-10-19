@@ -12,7 +12,6 @@ public class FPSManager : MonoBehaviour
     public Canvas Taskcanva;
     [SerializeField]
     Transform PressEText;
-
     Canvas PCScreen;
     Vector3 ScreenPosition;
     Quaternion ScreenRotation;
@@ -28,7 +27,6 @@ public class FPSManager : MonoBehaviour
             }
         }
         Taskcanva.renderMode = 0;
-        //Taskcanva.gameObject.SetActive(false);
         TaskManager.Instance.TaskDelegate += EnableCanvaWrapper;
         if (LocalizationController.Instance.language == LocalizationController.Language.english)
         {
@@ -43,14 +41,14 @@ public class FPSManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            EnableTaskCanva();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            DisableTaskCanva();
-        }
+        //if (Input.GetKeyDown(KeyCode.V))
+        //{
+        //    EnableTaskCanva();
+        //}
+        //if (Input.GetKeyDown(KeyCode.C))
+        //{
+        //    DisableTaskCanva();
+        //}
         CameraRayCast();
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -65,11 +63,11 @@ public class FPSManager : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 2f))
         {
             Transform objectHit = hit.transform;
-            //Debug.Log(objectHit.name);
             if (objectHit.CompareTag("Interactable"))
             {
                 if (objectHit.gameObject.GetComponent<TaskActivator>() != null)
                 {
+
                     if (objectHit.gameObject.GetComponent<TaskActivator>().isInteracable)
                     {
                         PressEText.gameObject.SetActive(true);
@@ -91,7 +89,10 @@ public class FPSManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DetectTaskActivator(objectHit);
-                EnablePCScreen(objectHit);
+                if (!TaskManager.Instance.controller.TaskMainCanva.activeInHierarchy)
+                {
+                    EnablePCScreen(objectHit);
+                }
             }
 
         }
