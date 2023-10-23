@@ -298,12 +298,12 @@ PrefabInstance:
     - target: {fileID: 3987486324795066270, guid: 584c85214761e6d4baedb26408eb0991,
         type: 3}
       propertyPath: m_MouseLook.XSensitivity
-      value: 0.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3987486324795066270, guid: 584c85214761e6d4baedb26408eb0991,
         type: 3}
       propertyPath: m_MouseLook.YSensitivity
-      value: 0.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3987486324801711710, guid: 584c85214761e6d4baedb26408eb0991,
         type: 3}
@@ -637,7 +637,7 @@ PrefabInstance:
     - target: {fileID: 5654869250639619058, guid: 1187b1564903c2943995d28a19105e75,
         type: 3}
       propertyPath: InputSource
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5598067121845601949, guid: 1187b1564903c2943995d28a19105e75, type: 3}

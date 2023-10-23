@@ -27,9 +27,9 @@ public class MainMenuController : MonoBehaviour
     TMP_Text infoTitle;
     [SerializeField]
     TMP_Text infoDescription;
-    [SerializeField] 
+    [SerializeField]
     TMP_Text infoBtnTitle;
-    [SerializeField] 
+    [SerializeField]
     TMP_Text infoBtnCorrect;
     [SerializeField]
     TMP_Text infoBtnSemiCorrect;
@@ -42,9 +42,9 @@ public class MainMenuController : MonoBehaviour
     {
         LocalizationController.Instance.onLanguageChange += ChangeTexts;
         ChangeTexts();
-#if UNITY_ANDROID
-        InfoPanel.SetActive(false);
-#endif
+        //#if UNITY_ANDROID
+        //        InfoPanel.SetActive(false);
+        //#endif
     }
     public void ChooseScenario(int select)
     {
@@ -99,7 +99,11 @@ public class MainMenuController : MonoBehaviour
             yesField.text = "YES";
             noField.text = "NO";
             infoTitle.text = "Information";
+#if UNITY_ANDROID
+            infoDescription.text = "\t\t\t\t\tControls\r\nLeft analog - Movement\r\nRight analog - 45 degree turn\r\nA button - move task tip infront\r\nX button - open ingame menu";
+#else
             infoDescription.text = "\t\t\t\t\tControls\r\nWASD - Movement\r\nQ - To quit pc screen\r\nE - To interact with objects\r\nR - To open ingame menu";
+#endif
             infoBtnTitle.text = "Button color meaning";
             infoBtnCorrect.text = "Correct";
             infoBtnSemiCorrect.text = "Semi correct";
@@ -116,7 +120,12 @@ public class MainMenuController : MonoBehaviour
             yesField.text = "JĀ";
             noField.text = "NĒ";
             infoTitle.text = "Informācija";
-            infoDescription.text = "\t\t\t\t\tKontroles\r\nWASD - Kustība\r\nQ - Lai izietu no datora režīma\r\nE - Lai pieskartos objektiem\r\nR - Lai atvērtu spēles izvēlni";
+#if UNITY_ANDROID
+            infoDescription.text = "\t\t\t\t\tKontroles\r\nKreisais analogs - Kustība\r\nLabais analogs - 45 gradu pagrieziens\r\nA poga - nolikt priekšā uzdevuma aprakstu\r\nX poga - Lai atvērtu spēles izvēlni";
+#else
+  infoDescription.text = "\t\t\t\t\tKontroles\r\nWASD - Kustība\r\nQ - Lai izietu no datora režīma\r\nE - Lai pieskartos objektiem\r\nR - Lai atvērtu spēles izvēlni";
+#endif
+
             infoBtnTitle.text = "Pogu krāsu nozīme";
             infoBtnCorrect.text = "Pareizi";
             infoBtnSemiCorrect.text = "Daļēji pareizi";

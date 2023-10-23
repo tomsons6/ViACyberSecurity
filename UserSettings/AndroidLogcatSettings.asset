@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "PA8150MGGB251661G",
+    "m_SelectedDeviceId": "1WMHHA68GN2201",
     "m_SelectedPackage": {
-        "deviceId": "PA8150MGGB251661G",
+        "deviceId": "1WMHHA68GN2201",
         "name": "com.VidzemesUniversity.CyberSecurityTraining",
-        "processId": 10943,
+        "processId": 24667,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -48,6 +48,24 @@
             "deviceId": "1WMHHA68GN2201",
             "name": "com.VidzemesUniversity.CyberSecurityTraining",
             "processId": 29413,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 9046,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 20203,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA68GN2201",
+            "name": "com.VidzemesUniversity.CyberSecurityTraining",
+            "processId": 24667,
             "exited": false
         },
         {

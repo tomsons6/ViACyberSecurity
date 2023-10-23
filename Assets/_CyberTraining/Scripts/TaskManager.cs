@@ -60,14 +60,7 @@ public class TaskManager : MonoBehaviour
         {
             if(controller.CurrentTask.TaskPrompt != "")
             {
-                if (controller.TaskPromptCanva.activeInHierarchy)
-                {
-                    controller.CloseTaskPromt();
-                }
-                else
-                {
-                    controller.TaskPromt();
-                }
+                controller.MoveTaskCanva();
             }
         }
     }

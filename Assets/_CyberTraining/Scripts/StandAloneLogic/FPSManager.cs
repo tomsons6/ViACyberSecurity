@@ -12,7 +12,9 @@ public class FPSManager : MonoBehaviour
     public Canvas Taskcanva;
     [SerializeField]
     Transform PressEText;
+
     Canvas PCScreen;
+    public bool PCScreenActive = false;
     Vector3 ScreenPosition;
     Quaternion ScreenRotation;
     Vector3 ScreenScale;
@@ -65,21 +67,28 @@ public class FPSManager : MonoBehaviour
             Transform objectHit = hit.transform;
             if (objectHit.CompareTag("Interactable"))
             {
-                if (objectHit.gameObject.GetComponent<TaskActivator>() != null)
+                if (!TaskManager.Instance.controller.TaskMainCanva.activeInHierarchy)
                 {
-
-                    if (objectHit.gameObject.GetComponent<TaskActivator>().isInteracable)
+                    if (objectHit.gameObject.GetComponent<TaskActivator>() != null)
                     {
-                        PressEText.gameObject.SetActive(true);
+
+                        if (objectHit.gameObject.GetComponent<TaskActivator>().isInteracable)
+                        {
+                            PressEText.gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            PressEText.gameObject.SetActive(false);
+                        }
                     }
                     else
                     {
-                        PressEText.gameObject.SetActive(false);
+                        PressEText.gameObject.SetActive(true);
                     }
                 }
                 else
                 {
-                    PressEText.gameObject.SetActive(true);
+                    PressEText.gameObject.SetActive(false);
                 }
             }
             else
@@ -114,6 +123,7 @@ public class FPSManager : MonoBehaviour
     {
         if (RayCastObj.GetComponentInParent<Canvas>() != null)
         {
+            PCScreenActive = true;
             PCScreen = RayCastObj.GetComponentInParent<Canvas>();
             ScreenPosition = PCScreen.GetComponent<RectTransform>().position;
             ScreenRotation = PCScreen.GetComponent<RectTransform>().rotation;
@@ -126,6 +136,7 @@ public class FPSManager : MonoBehaviour
     {
         if (PCScreen != null)
         {
+            PCScreenActive = false;
             EnableControls(true);
             PCScreen.renderMode = RenderMode.WorldSpace;
             PCScreen.GetComponent<RectTransform>().sizeDelta = new Vector2(1920, 1080);

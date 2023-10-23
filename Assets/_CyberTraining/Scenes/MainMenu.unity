@@ -5712,8 +5712,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7158,7 +7158,7 @@ PrefabInstance:
     - target: {fileID: 4252995935641774283, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.52
       objectReference: {fileID: 0}
     - target: {fileID: 4252995935641774283, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
@@ -7218,7 +7218,7 @@ PrefabInstance:
     - target: {fileID: 7707712752503014928, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
       propertyPath: CharacterControllerYOffset
-      value: 0.7
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 7707712752503014928, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
@@ -7228,7 +7228,7 @@ PrefabInstance:
     - target: {fileID: 7876461897672132687, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
       propertyPath: InputSource
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7876461897672132687, guid: 2e39c698a32109447980926b96127a4c,
         type: 3}
@@ -9218,8 +9218,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12996,12 +12996,12 @@ PrefabInstance:
     - target: {fileID: 7504371414314758052, guid: 518e764675479c94db42ab602dfca949,
         type: 3}
       propertyPath: m_MouseLook.XSensitivity
-      value: 0.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7504371414314758052, guid: 518e764675479c94db42ab602dfca949,
         type: 3}
       propertyPath: m_MouseLook.YSensitivity
-      value: 0.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7504371414314758052, guid: 518e764675479c94db42ab602dfca949,
         type: 3}

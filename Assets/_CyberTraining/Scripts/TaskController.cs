@@ -52,6 +52,8 @@ public class TaskController : MonoBehaviour
     [SerializeField]
     AudioSource Click;
 
+    bool WasTaskCanvaOpen;
+
     private void Start()
     {
         TranslateIngameMenu();
@@ -60,15 +62,50 @@ public class TaskController : MonoBehaviour
     {
         if(InputBridge.Instance.XButtonDown || Input.GetKeyDown(KeyCode.R))
         {
+
             if(InGameMenu.activeInHierarchy)
             {
+
                 InGameMenu.SetActive(false);
-                GetComponentInParent<FPSManager>().EnableControls(true);
+                if (WasTaskCanvaOpen)
+                {
+                    TaskMainCanva.SetActive(true);
+                }
+                else
+                {
+                    TaskPromptCanva.SetActive(true);
+                }
+#if PLATFORM_STANDALONE_WIN || UNITY_WEBGL
+                if(!TaskMainCanva.activeInHierarchy) 
+                {
+                    if (!GetComponentInParent<FPSManager>().PCScreenActive)
+                    {
+                        GetComponentInParent<FPSManager>().EnableControls(true);
+                    }
+                }
+#endif
             }
             else
             {
+                if (TaskMainCanva.activeInHierarchy)
+                {
+                    WasTaskCanvaOpen = true;
+                }
+                else
+                {
+                    WasTaskCanvaOpen = false;
+                }
+                MoveTaskCanva();
+                CloseTaskPromt();
+                if(WasTaskCanvaOpen)
+                {
+                    TaskMainCanva.SetActive(false);
+                }
                 InGameMenu.SetActive(true);
+#if PLATFORM_STANDALONE_WIN || UNITY_WEBGL
                 GetComponentInParent<FPSManager>().EnableControls(false);
+
+#endif
             }
         }
     }
